@@ -20,6 +20,19 @@ section[role="region"] > header:first-child .state-icon:before {
   right: -0.5rem;
 }
 
+.settings ul li > label.pack-checkbox.state-icon > span:after, 
+.settings ul li > label.pack-radio.state-icon > span:after, 
+.settings ul li > label.pack-switch.state-icon > input ~ span:after {
+    left: auto;
+    right: 6rem;
+}
+
+.settings .state-icon:before {
+    position: absolute;
+    right: 1rem;
+    top: 1.5rem;
+}
+
 .state-online:before { background-position: 0 0; }
 .state-not-available:before { background-position: 0 -30px; }
 .state-away:before { background-position: 0 -60px; }

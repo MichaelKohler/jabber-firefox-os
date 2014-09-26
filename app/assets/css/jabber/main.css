@@ -65,18 +65,10 @@ section[role="region"][data-position="right"] {
   -webkit-animation: fadeOut 0.2s forwards;
 }
 
-
-#composer-container {
+.header {
   position: relative;
-  height: 100%;
-}
-
-.new .article-list {
-  z-index: 5;
-
-  padding: 0;
-
-  text-align: left;
+  top: 5rem;
+  height: calc(100% - 5rem);
 }
 
 /*
@@ -86,13 +78,11 @@ section[role="region"][data-position="right"] {
  * - 'messages-compose-form'
  */
 
-.flex-composer {
+.flex-chat {
   display: flex;
   flex-direction: column;
-
   height: 100%;
   top: 0;
-
   overflow: hidden;
 }
 
@@ -119,6 +109,36 @@ section[role="region"][data-position="right"] {
    */
   flex: 1 0 calc(15.4% + 5.38rem);
   overflow: auto;
+  padding: 0.5rem;
+}
+
+.message {
+  font-size: 1.2rem;
+}
+
+.user-1 {
+	font-family: monospace;
+	color: #C4440D;
+}
+
+.user-2 {
+	font-family: monospace;
+	color: #0373D1;
+}
+
+.user-3 {
+	font-family: monospace;
+	color: #A3DB41;
+}
+
+.user-4 {
+	font-family: monospace;
+	color: #2903DB;
+}
+
+.user-5 {
+	font-family: monospace;
+	color: #06D138;
 }
 
 #messages-compose-form {
@@ -129,13 +149,6 @@ section[role="region"][data-position="right"] {
   min-height: 4rem;
 
   background-color: #fff;
-}
-
-/* Overwrite. No more fixed height */
-form[role="search"] p input,
-form[role="search"] p textarea,
-form[role="search"] button[type="submit"] + p > textarea {
-  height: auto;
 }
 
 /*
@@ -161,6 +174,8 @@ form[role="search"] button[type="submit"] + p > textarea {
 
   font-size: 1.7rem;
   line-height: 2.1rem;
+  
+  outline: 0;
 }
 
 #messages-input:after {
@@ -181,14 +196,6 @@ form[role="search"] button[type="submit"] + p > textarea {
   visibility: visible;
 }
 
-/* Overwrite BB because of the previous rule */
-/*
-form[role="search"] button[type="submit"]:after {
-    content: "";
-    background: none;
-}
-*/
-
 .top-composer-section {
   display: none;
 
@@ -198,46 +205,11 @@ form[role="search"] button[type="submit"]:after {
   background-color: #e1f0ec;
 }
 
-.subject-input-visible .top-composer-section {
-  display: flex;
-  align-items: flex-end;
-}
-
 .bottom-composer-section {
   display: flex;
   flex-direction: row;
 
   min-height: 0;
-}
-
-#messages-subject-input {
-  position: relative;
-
-  flex-grow: 1;
-
-  box-sizing: border-box;
-  min-width: 0;
-  padding: 0 0 0.1rem 1.5rem;
-
-  text-align: left;
-
-  color: #008787;
-
-  font-size: 1.7rem;
-}
-
-#messages-subject-input:after {
-  position: absolute;
-  top: 0;
-
-  color: #00adad;
-  font-weight: normal;
-  font-style: italic;
-  pointer-events: none;
-}
-
-#messages-subject-input.placeholder:after {
-  content: attr(data-placeholder);
 }
 
 .composer-message-input-container {
@@ -270,15 +242,11 @@ form[role="search"] button[type="submit"]:after {
 
 #messages-send-button {
   height: 4rem;
-  overflow: visible;
-  background: url(images/icons/actionicon_sms_send_30x30.png)
-              no-repeat center center / 3rem;
-
   align-self: flex-end;
 }
 
-#messages-send-button:after {
-  display: none
+#messages-send-button:before {
+  color: #9B9B9B;
 }
 
 #messages-send-button[disabled] {
@@ -290,81 +258,6 @@ form[role="search"] button[type="submit"]:after {
   pointer-events: none;
 }
 
-#messages-counter-label {
-  padding-top: .7rem;
+section[role="region"] > header:first-child a, section[role="region"] > header:first-child button {
+    color: #fff;
 }
-
-/* TODO: Revise message-counter handling in bug 1061215*/
-[data-message-type='sms'] #messages-counter-label.has-counter {
-  display: block;
-  visibility: hidden;
-}
-
-[data-message-type='sms'] .has-counter:after {
-  position: absolute;
-  top: 0.6rem;
-  left: 0;
-
-  display: block;
-  visibility: visible;
-
-  width: 100%;
-
-  content: attr(data-counter);
-}
-
-#messages-attach-button {
-  align-self: flex-end;
-  flex: none;
-
-  box-sizing: content-box;
-  width: 3rem;
-  margin: 0;
-  padding: 0 1rem 0 0.5rem;
-
-  background: transparent
-              url('images/icons/actionicon_sms_add_attachment_30x30.png')
-              no-repeat center / 3rem;
-}
-
-/*
-  DSDS
-*/
-
-.sim-indication {
-  position: absolute;
-  top: 0.3rem;
-  right: 1.9rem;
-
-  display: none;
-  line-height: 1;
-
-  color: black;
-  font-size: 1.3rem;
-  font-style: normal;
-  opacity: 0.5;
-}
-
-button[disabled] .sim-indication {
-  color: inherit;
-}
-
-.has-preferred-sim .sim-indication {
-  display: block;
-}
-
-.has-preferred-sim #messages-send-button:before {
-  position: absolute;
-  top: 1rem;
-  left: 0;
-  right: 0;
-
-  content: '...';
-  display: block;
-  width: 100%;
-
-  color: #b2b2b2;
-  text-align: center;
-  font-size: 1.8rem;
-}
-

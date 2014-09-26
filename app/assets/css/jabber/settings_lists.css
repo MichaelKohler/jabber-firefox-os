@@ -1,0 +1,388 @@
+
+.settings ul {
+  margin: 0;
+  padding: 1rem 1rem 3rem 1rem;
+  overflow: hidden;
+  list-style: none;
+  height: 100%;
+  background-color: #f4f4f4;
+}
+.settings ul li {
+  -moz-box-sizing: border-box;
+  position: relative;
+  color: #000;
+}
+.settings ul li label:not([for]) {
+  background: none;
+}
+.settings ul li > a,
+.settings ul li > span,
+.settings ul li > small,
+.settings ul li > label > span,
+.settings ul li > label > small {
+  text-decoration: none;
+  outline: 0;
+  color: #000;
+  -moz-box-sizing: border-box;
+  font-size: 1.9rem;
+  padding: 0 3rem;
+  margin: 0 -1.5rem;
+}
+.settings ul li,
+.settings ul li > a,
+.settings ul li > label {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.settings ul li[hidden] {
+  display: none;
+}
+.settings ul li > a > span {
+  pointer-events: none;
+}
+.settings ul li.active a,
+.settings ul li.active span,
+.settings ul li:not([aria-disabled="true"]) > small + a:active,
+.settings ul li:not([aria-disabled="true"]) > a[href]:active,
+.settings ul li:not([aria-disabled="true"]) > small + a:focus,
+.settings ul li:not([aria-disabled="true"]) > a[href]:focus {
+  background-color: #b2f2ff;
+  color: #222;
+}
+.settings ul li[aria-disabled="true"] > a,
+.settings ul li[aria-disabled="true"] > p {
+  color: #797e80;
+  opacity: 0.6;
+  pointer-events: none;
+}
+.settings ul > li > progress {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+.settings ul > li > progress + span {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0;
+  padding: 0 0 0 1rem;
+  color: #505b5b;
+  font-size: 1.4rem;
+  line-height: 6rem;
+}
+.settings ul li > a span:nth-of-type(2):not(.button) {
+  position: absolute;
+  right: 1.5rem;
+  color: #505859;
+  line-height: 6rem;
+  height: 6rem;
+  top: 0;
+}
+.settings ul li > small, .settings ul li > label > small , .settings ul li > a > small {
+  display: block;
+  font-size: 1.4rem;
+  color: #505859;
+  
+  pointer-events: none;
+}
+small.multiline > span {
+  display: block;
+}
+.settings ul li > label {
+  font-size: 1.9rem;
+  line-height: 1.9rem;
+  font-weight: 400;
+  margin: 0;
+  padding: 1.5rem 1.5rem 1rem;
+}
+.settings ul li > label ~ input {
+  margin-bottom: 1.5rem;
+}
+.settings ul li > label.pack-checkbox > small,
+.settings ul li > label.pack-radio > small {
+  right: 6.1rem;
+}
+.settings ul li > label.pack-switch > small {
+  right: 9rem;
+}
+.settings ul li > label.pack-checkbox > .color-preview:before {
+  height: 2rem;
+  width: 2rem;
+  content: "";
+  margin: -1.1rem 0 0 -3rem;
+  top: 50%;
+  position: absolute;
+}
+ul.disabled li > label.pack-checkbox > .color-preview:before {
+  opacity: 0.4;
+}
+.settings ul li > label.pack-checkbox > .warning-counter:before {
+  background-color: orange;
+}
+.settings ul li > label.pack-checkbox > .error-counter:before {
+  background-color: red;
+}
+.settings ul li > label.pack-checkbox > .security-counter:before {
+  background-color: black;
+}
+.settings ul li > label.pack-checkbox > .reflow-counter:before {
+  background-color: purple;
+}
+.settings ul li > label.pack-checkbox > .jank-monitor:before {
+  background-color: cornflowerblue;
+}
+.settings ul li > label.pack-checkbox > .fps-monitor:before {
+  background-color: fuchsia;
+}
+.settings ul li > label.pack-checkbox > .ttl-monitor:before {
+  background-color: darkgreen;
+}
+.settings ul li > label.pack-checkbox > .uss-monitor:before {
+  background-color: dimgrey;
+}
+.settings ul li > label.pack-checkbox > .memory-monitor:before {
+  background-color: lightslategrey;
+}
+.settings ul li > label.pack-checkbox > .memory-item:before {
+  background-color: lightslategrey;
+  height: 2rem;
+  width: 2rem;
+  margin: -1.1rem 0 0 -3rem;
+}
+.settings ul li button,
+.settings ul li a[role="button"] {
+  display: inline-block;
+  margin: 1rem 0;
+}
+.settings ul li label {
+  text-transform: none;
+}
+.settings ul li > label:not([for]),
+.settings ul li > label.pack-checkbox,
+.settings ul li > label.pack-radio,
+.settings ul li > label.pack-switch {
+  padding: 0 1.5rem;
+  margin: 0 -1.5rem;
+  width: 100%;
+  height: 100%;
+  min-height: 6rem;
+  overflow: visible;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.settings ul li > label:not([for]) > span,
+.settings ul li > label.pack-checkbox > span,
+.settings ul li > label.pack-radio > span,
+.settings ul li > label.pack-switch > span {
+  line-height: normal;
+  height: auto;
+}
+.settings ul li > label.pack-checkbox > span:after,
+.settings ul li > label.pack-radio > span:after,
+.settings ul li > label.pack-switch > input ~ span:after {
+  left: auto;
+  right: 1.5rem;
+}
+.settings ul li > label.pack-checkbox > span {
+  padding-right: 6.1rem;
+}
+.settings ul li > label.pack-radio ~ p {
+  padding-right: 3rem;
+}
+.settings ul li > label.pack-switch > span {
+   padding-right: 9rem;
+}
+.settings ul li > label.pack-radio > span {
+  padding-right: 5.9rem;
+}
+.settings ul li > label.pack-checkbox:active,
+.settings ul li > label.pack-radio:active,
+.settings ul li > label.pack-switch:active {
+  background-color: #b2f2ff;
+  color: #222;
+}
+.settings ul li.pack-split .name:active {
+  background-color: #B2F2FF;
+}
+.settings ul li.pack-split .name {
+  position: absolute;
+  top: 0;
+  width: calc(100% - 9rem);
+  padding-left: 1.5rem;
+}
+.settings ul li.pack-split:after {
+  content: '';
+  position: absolute;
+  background-color: #E6E6E3;
+  right: 7.5rem;
+  width: 0.1rem;
+  height: calc(100% - 2rem);
+  top: 1rem;
+}
+.settings ul li.pack-split > span {
+  background-color: transparent;
+}
+.settings ul li p {
+  font-size: 1.9rem;
+  line-height: 1.9rem;
+  font-weight: 400;
+  margin: 0;
+  padding: 1.5rem 1.5rem 1rem;
+}
+.settings ul li p + label:not([for]) {
+  top: 2.5rem;
+  height: calc(100% - 2.5rem);
+}
+input[type=range] {
+  -moz-appearance: none;
+  border: none;
+  background: none;
+}
+input[type=range]::-moz-focus-outer {
+  border: 0;
+}
+.settings ul li > label input[type="range"] {
+  height: 3rem;
+  width: calc(100% - 3rem);
+  margin: 1.5rem;
+}
+input[type=range]::-moz-range-track {
+  height: 0.1rem;
+  background-color: #7e7e7e;
+}
+input[type=range]::-moz-range-progress {
+  height: 0.3rem;
+  background-color: #01c5ed;
+}
+input[type=range]::-moz-range-thumb {
+  width: 2.8rem;
+  height: 2.8rem;
+  border: solid 0.1rem transparent;
+  border-radius: 3rem;
+  transition: border 0.15s ease;
+  -moz-box-sizing: border-box;
+  background: url(images/range_thumb.png) no-repeat 50% 50%;
+  background-size: 2.8rem 2.8rem;
+}
+input[type=range]:active::-moz-range-thumb {
+  border: solid 0.4rem #01c5ed;
+}
+.settings ul li.sound-setting > label input[type="range"] {
+  margin: 0 auto;
+  width: calc(100% - 3rem);
+  left: 1.5rem;
+}
+.settings ul li.brightness-manual > label input[type="range"] {
+  margin: 0 auto;
+  width: calc(100% - 10rem);
+  display: inline;
+}
+.settings ul > li progress[value] {
+  display: block;
+  width: calc(100% - 3rem);
+  height: 3rem;
+  margin: 3rem auto;
+  background: #e7e7e7;
+  border: 0.1rem solid #b6b6b6;
+  border-radius: 0.3rem;
+}
+.settings ul > li progress[value]::-moz-progress-bar {
+  margin: 1px;
+  height: calc(100% - 0.2rem);
+  border-radius: 0.2rem;
+  background-color: #82c72c;
+}
+dl > * {
+  font-size: 1.7rem;
+}
+dl dt {
+  padding-left: 3rem;
+  font-weight: 500;
+  border-bottom: 0.1rem solid black;
+}
+dl dd {
+  margin: 0;
+  padding: 1rem 3rem;
+  border-bottom: 0.1rem solid #e6e6e3; 
+}
+html[dir="rtl"] .settings ul > li > progress + span {
+  padding-left: 0;
+  padding-right: 1rem;
+}
+html[dir="rtl"] .settings ul li > a span:nth-of-type(2):not(.button) {
+  left: 1.5rem;
+  right: auto;
+}
+html[dir="rtl"] .settings ul li > label.pack-checkbox > small,
+html[dir="rtl"] .settings ul li > label.pack-radio > small {
+  left: 6.1rem;
+  right: 4rem;
+}
+html[dir="rtl"] .settings ul li > label.pack-checkbox > small:not(.menu-item-desc),
+html[dir="rtl"] .settings ul li > label.pack-radio > small:not(.menu-item-desc) {
+   left: 9rem;
+   right: 2rem;
+}
+html[dir="rtl"] .settings ul li > label.pack-switch > small {
+   left: 9rem;
+   right: 4rem;
+}
+html[dir="rtl"] .settings ul li > label.pack-switch > small:not(.menu-item-desc) {
+   left: 9rem;
+   right: 2rem;
+}
+html[dir="rtl"] .settings ul li > label.pack-checkbox > span:after,
+html[dir="rtl"] .settings ul li > label.pack-radio > span:after,
+html[dir="rtl"] .settings ul li > label.pack-switch > input ~ span:after {
+  left: 1.5rem;
+  right: auto;
+}
+html[dir="rtl"] .settings ul li > label.pack-checkbox > span {
+  padding-left: 6.1rem;
+}
+html[dir="rtl"] .settings ul li > label.pack-checkbox > span:not(.menu-item) {
+  padding-left: 6.1rem;
+  padding-right: 3rem;
+}
+html[dir="rtl"] .settings ul li > label.pack-radio ~ p {
+  padding-left: 3rem;
+}
+html[dir="rtl"] .settings ul li > label.pack-switch > span {
+  padding-left: 9rem;
+}
+html[dir="rtl"] .settings ul li > label.pack-switch > span:not(.menu-item) {
+  padding-left: 9rem;
+  padding-right: 3rem;
+}
+html[dir="rtl"] .settings ul li > label.pack-radio > span {
+  padding-left: 5.9rem;
+}
+html[dir="rtl"] .settings ul li > label.pack-radio > span:not(.menu-item) {
+  padding-left: 5.9rem;
+  padding-right: 3rem;
+}
+html[dir="rtl"] .settings ul li > label input[type="range"] {
+  left: 7rem;
+  right: 5rem;
+}
+html[dir="rtl"] .settings ul li.sound-setting > label input[type="range"] {
+  left: auto;
+  right: 1.5rem;
+}
+html[dir="rtl"] dl dt {
+  padding-left: 0;
+  padding-right: 3rem;
+}
+html[dir="rtl"] .settings ul li.bluetooth-device > a{
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+html[dir="rtl"] .settings ul li > label.pack-checkbox > .color-preview:before {
+  margin-left: 0;
+  margin-right: -3rem;
+}
+html[dir="rtl"] .settings ul li > label.pack-checkbox > .memory-item:before {
+  margin-left: 0;
+  margin-right: -3rem;
+}
