@@ -69,6 +69,20 @@
         optionsPanel.hidden = false;
     }, false);
     
+    // Settings - All "Done" Buttons redirect to Mainscreen, normally
+    // would they force a "Save Settings" Action before redirect
+    var settingsDoneButtons = document.querySelectorAll('.settings-done');
+    
+    for(var i = 0, iLen = settingsDoneButtons.length; i < iLen; i++) {
+        settingsDoneButtons[i].addEventListener('click', function(){
+            for(var i = 0, iLen = mainPanels.length; i < iLen; i++) {
+                mainPanels[i].hidden = true;
+                mainPanels[i].classList.remove('open-sidebar');
+            }
+            contactsPanel.hidden = false;
+        }, false);
+    }
+    
     // Main screen
     document.getElementById('show-change-status-btn').addEventListener('click', function(){
         for(var i = 0, iLen = mainPanels.length; i < iLen; i++) {
