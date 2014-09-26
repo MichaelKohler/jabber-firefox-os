@@ -46,35 +46,56 @@
     <link rel="stylesheet" href="assets/css/jabber/settings_lists.css">
 </head>
 <body>
-    <section role="region" data-position="current">
-        <header class="fixed">
-            <a href="#"><span class="icon icon-back">back</span></a>
-            <menu type="toolbar">
-                <button><span class="icon state-icon state-online">Change Status</span></button>
-            </menu>
-            <h1>mkohler</h1>
-        </header>
-        <article class="header" id="chat-container">
-            <div class="flex-chat">
-                <div id="messages-container">
-                    <div class="message"><span class="user-1">[19:30:59] &lt;mkohler&gt;</span> Hello Ladies and Gentleman</div>
-                    <div class="message"><span class="user-2">[19:31:12] &lt;Martin&gt;</span> Hi</div>
-                    <div class="message"><span class="user-1">[19:35:05] &lt;mkohler&gt;</span> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore</div>
-                </div>
-                <form id="messages-compose-form" role="search" class="bottom" style="background:#efefef">
-                    <section class="bottom-composer-section">
-                        <div class="composer-message-input-container">
-                            <div data-placeholder="Message" id="messages-input" name="message" class="js-l10n-placeholder placeholder" role="textbox" aria-multiline="true" contenteditable="true"><br></div>
-                        </div>
-                        <div class="composer-button-container">
-                            <button id="messages-send-button" data-icon="send" aria-label="send" data-l10n-id="send-button" type="submit"></button>
-                        </div>
-                    </section>
-                </form>
-            </div>
-        </article>
+    <section id="index" data-position="current">
+        <section data-type="sidebar">
+            <header>
+                <menu type="toolbar">
+                    <a href="#">Done</a>
+                </menu>
+                <h1>Settings</h1>
+            </header>
+            <nav>
+                <ul>
+                    <li><a href="#">Contacts</a></li>
+                    <li><a href="#">Add Contact</a></li>
+                    <li><a href="#">Change Status</a></li>
+                </ul>
+                <h2>Account Setup</h2>
+                <ul>
+                    <li><a href="#">Account</a></li>
+                    <li><a href="#">Connection</a></li>
+                    <li><a href="#">Options</a></li>
+                </ul>
+            </nav>
+        </section>
+        <section id="drawer" role="region">
+            <header class="fixed">
+                <a href="#"><span class="icon icon-menu">hide sidebar</span></a>
+                <a href="#drawer"><span class="icon icon-menu">show sidebar</span></a>
+                <menu type="toolbar">
+                    <button><span>Done</span></button>
+                </menu>
+                <h1>Connection</h1>
+            </header>
+            <article class="settings header">
+                <ul>
+                    <li>
+                        <input type="text" placeholder="Host" required="">
+                    </li>
+                    <li>
+                        <input type="text" placeholder="Port" value="5222" required="">
+                    </li>
+                    <li>
+                        <label class="pack-switch">
+                            <input type="checkbox" checked>
+                            <span>Send "Keep-alive" packets (for NAT timeouts)</span>
+                        </label>
+                    </li>
+                </ul>
+            </article>
+        </section>
     </section>
-
+    
     <script src="scripts/main.js"></script>
 
 </body>

@@ -73,34 +73,44 @@
                 <a href="#"><span class="icon icon-menu">hide sidebar</span></a>
                 <a href="#drawer"><span class="icon icon-menu">show sidebar</span></a>
                 <menu type="toolbar">
-                    <button><span class="icon state-icon state-online">Change Status</span></button>
+                    <button><span>Done</span></button>
                 </menu>
-                <h1>Martin</h1>
+                <h1>Account</h1>
             </header>
-            <article class="scrollable header">
-                <div data-type="list">
-                    <ul>
-                        <li class="contact">
-                            <a href="#" class="state-icon state-online">
-                                <p>mkohler</p>
-                            </a>
-                        </li>
-                        <li class="contact">
-                            <a href="#" class="state-icon state-away">
-                                <p>SunboX</p>
-                            </a>
-                        </li>
-                        <li class="contact">
-                            <a href="#" class="state-icon state-offline">
-                                <p>john.doe@jabber.domain.tld</p>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
+            <article class="settings header">
+                <ul>
+                    <li>
+                        <input type="text" placeholder="Jabber ID" required="">
+                    </li>
+                    <li>
+                        <input type="password" placeholder="Password" required="">
+                    </li>
+                    <li>
+                        <input type="text" placeholder="Nickname (optional)">
+                    </li>
+                    <li>
+                        <label class="pack-switch">
+                            <input type="checkbox" checked>
+                            <span>Automatically connect on startup</span>
+                        </label>
+                    </li>
+                    <li>
+                        <label class="pack-switch">
+                            <input type="checkbox" checked>
+                            <span>Automatically reconnect if disconnected</span>
+                        </label>
+                    </li>
+                    <li>
+                        <label class="pack-switch">
+                            <input type="checkbox" checked>
+                            <span>Log message history</span>
+                        </label>
+                    </li>
+                </ul>
             </article>
         </section>
     </section>
-
+    
     <script src="scripts/main.js"></script>
 
 </body>
