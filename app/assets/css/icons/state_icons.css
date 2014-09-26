@@ -34,6 +34,9 @@ section[role="region"] > header:first-child .state-icon:before {
 }
 
 .state-online:before { background-position: 0 0; }
-.state-not-available:before { background-position: 0 -30px; }
+.state-free-for-chat:before { background-position: 0 0; }
 .state-away:before { background-position: 0 -60px; }
+.state-not-available:before { background-position: 0 -30px; }
+.state-do-not-disturb:before { background-position: 0 -30px; }
+.state-invisible:before { background-position: 0 -90px; }
 .state-offline:before { background-position: 0 -90px; }
