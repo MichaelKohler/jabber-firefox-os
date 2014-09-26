@@ -40,8 +40,8 @@
     <link rel="stylesheet" href="assets/css/jabber/settings_lists.css">
 </head>
 <body>
+
     <section id="index" data-position="current">
-        
         <section data-type="sidebar" id="sidebar">
             <header>
                 <menu type="toolbar">
@@ -63,7 +63,7 @@
                 </ul>
             </nav>
         </section>
-        
+
         <!------------------ Main Screen (Contacts) ------------------>
         <section id="contacts-panel" role="region">
             <header class="fixed">
@@ -95,7 +95,7 @@
                 </div>
             </article>
         </section>
-        
+
         <!------------------ Change Status Screen ------------------>
         <section id="change-status-panel" role="region" hidden>
             <header class="fixed">
@@ -152,7 +152,7 @@
                 </ul>
             </article>
         </section>
-        
+
         <!------------------ Add Contact Screen ------------------>
         <section id="add-contact-panel" role="region" hidden>
             <header class="fixed">
@@ -179,7 +179,7 @@
                 </ul>
             </article>
         </section>
-        
+
         <!------------------ Account Settings Screen ------------------>
         <section id="account-settings-panel" role="region" hidden>
             <header class="fixed">
@@ -221,7 +221,7 @@
                 </ul>
             </article>
         </section>
-        
+
         <!------------------ Connection Settings Screen ------------------>
         <section id="connection-settings-panel" role="region">
             <header class="fixed">
@@ -248,7 +248,7 @@
                 </ul>
             </article>
         </section>
-        
+
         <!------------------ Options Screen ------------------>
         <section id="options-panel" role="region">
             <header class="fixed">
@@ -323,7 +323,6 @@
                 </ul>
             </article>
         </section>
-        
     </section>
 
     <!------------------ Chat Screen ------------------>
@@ -355,7 +354,7 @@
             </div>
         </article>
     </section>
-    
+
     <section id="contact-settings" role="dialog" data-position="action-menu" data-type="action" hidden>
         <header>Settings for mkohler</header>
         <menu>
@@ -366,8 +365,9 @@
             <button id="hide-contact-settings">Cancel</button>
         </menu>
     </section>
-    
-    <script src="scripts/main.js"></script>
 
+    <script src="scripts/lib/node-xmpp-browser.js"></script>
+    <script src="scripts/chat.js"></script>
+    <script src="scripts/main.js"></script>
 </body>
 </html>

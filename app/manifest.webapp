@@ -14,7 +14,9 @@
     "url": "https://github.com/MichaelKohler/jabber-firefox-os"
   },
   "type": "privileged",
-  "permissions": {},
+  "permissions": {
+    "systemXHR": {"description": "To communicate with your Jabber Server(s)"}
+  },
   "installs_allowed_from": [
     "*"
   ],
