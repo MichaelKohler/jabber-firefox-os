@@ -1,5 +1,7 @@
 (function () {
     'use strict';
+
+    var themeColor = document.head.querySelector('meta[name="theme-color"]');
     
     var index = document.getElementById('index');
     var chat = document.getElementById('chat');
@@ -91,5 +93,20 @@
         chat.className = 'right';
         index.className = 'current';
     }, false);
-                                                              
+    
+    // Contact/chat settings
+    var contactSettings = document.getElementById('contact-settings');
+    
+    document.getElementById('show-contact-settings').addEventListener('click', function(){
+        themeColor.content = 'black';
+        contactSettings.hidden = false;
+        contactSettings.className = 'fade-in';
+    }, false);
+    
+    document.getElementById('hide-contact-settings').addEventListener('click', function(){
+        themeColor.content = '#F97C17';
+        contactSettings.className = 'fade-out';
+        contactSettings.hidden = true;
+    }, false);
+                                                  
 }());

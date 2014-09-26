@@ -331,7 +331,7 @@
         <header class="fixed">
             <button id="chat-back-btn"><span class="icon icon-back">back</span></button>
             <menu type="toolbar">
-                <button data-icon="more"></button>
+                <button id="show-contact-settings" data-icon="more"></button>
             </menu>
             <h1>mkohler</h1>
         </header>
@@ -354,6 +354,17 @@
                 </form>
             </div>
         </article>
+    </section>
+    
+    <section id="contact-settings" role="dialog" data-position="action-menu" data-type="action" hidden>
+        <header>Settings for mkohler</header>
+        <menu>
+            <button>Clear chat</button>
+            <button>Show chat history</button>
+            <button>Mute mkohler</button>
+
+            <button id="hide-contact-settings">Cancel</button>
+        </menu>
     </section>
     
     <script src="scripts/main.js"></script>
