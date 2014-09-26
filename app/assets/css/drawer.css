@@ -10,24 +10,9 @@ section[role="region"] {
   z-index: 100;
 }
 
-section[role="region"]:target {
+section[role="region"].open-sidebar {
   transform: translateX(80%);
 }
-
-/* Hide anchor to change target */
-section[role="region"] > header:first-child > a:first-of-type {
-  display: none;
-}
-section[role="region"]:target > header:first-child > a:first-of-type {
-  display: block;
-}
-section[role="region"] > header:first-child > a:last-of-type {
-  display: block;
-}
-section[role="region"]:target > header:first-child > a:last-of-type {
-  display: none;
-}
-
 
 /* Sidebar */
 section[data-type="sidebar"] {
