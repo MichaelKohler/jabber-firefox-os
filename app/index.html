@@ -77,7 +77,7 @@
             <header class="fixed">
                 <button class="toggle-sidebar"><span class="icon icon-menu">show sidebar</span></button>
                 <menu type="toolbar">
-                    <button><span class="icon state-icon state-online">Change Status</span></button>
+                    <button id="show-change-status-btn"><span class="icon state-icon state-online">Change Status</span></button>
                 </menu>
                 <h1>Martin</h1>
             </header>
@@ -117,7 +117,7 @@
                 <ul>
                     <li>
                         <label class="pack-radio state-icon state-online">
-                            <input type="radio" name="status">
+                            <input type="radio" name="status" checked>
                             <span>Online</span>
                         </label>
                     </li>
@@ -153,7 +153,7 @@
                     </li>
                     <li>
                         <label class="pack-radio state-icon state-offline">
-                            <input type="radio" name="status" checked>
+                            <input type="radio" name="status">
                             <span>Offline</span>
                         </label>
                     </li>

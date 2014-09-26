@@ -67,6 +67,15 @@
         optionsPanel.hidden = false;
     }, false);
     
+    // Main screen
+    document.getElementById('show-change-status-btn').addEventListener('click', function(){
+        for(var i = 0, iLen = mainPanels.length; i < iLen; i++) {
+            mainPanels[i].hidden = true;
+            mainPanels[i].classList.remove('open-sidebar');
+        }
+        changeStatusPanel.hidden = false;
+    }, false);
+    
     // Start chat
     var contacts = document.querySelectorAll('.contact');
     
