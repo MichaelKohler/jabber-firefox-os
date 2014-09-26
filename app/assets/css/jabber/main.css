@@ -1,0 +1,19 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#index, #chat {
+  height: 100%;
+}
+
+.header {
+  position: relative;
+  top: 5rem;
+  height: calc(100% - 5rem);
+}
+
+section[role="region"] > header:first-child a, 
+section[role="region"] > header:first-child button {
+    color: #fff;
+}

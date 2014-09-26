@@ -1,17 +1,31 @@
 {
-  "name": "Jabber Firefox OS",
-  "description": "Jabber client for Firefox OS",
+  "version": "0.1.0",
+  "name": "Jabber",
+  "description": "Description to be written...",
   "launch_path": "/index.html",
   "icons": {
-    "128": "/img/icon-128.png"
+    "16": "/assets/icons/icon16x16.png",
+    "48": "/assets/icons/icon48x48.png",
+    "60": "/assets/icons/icon60x60.png",
+    "128": "/assets/icons/icon128x128.png"
   },
   "developer": {
-    "name": "Your name or organization",
-    "url": "http://your-homepage-here.org"
+    "name": "",
+    "url": "https://github.com/MichaelKohler/jabber-firefox-os"
   },
-  "default_locale": "en",
   "type": "privileged",
   "permissions": {
     "systemXHR": {"description": "To communicate with your Jabber Server(s)"}
-  }
+  },
+  "installs_allowed_from": [
+    "*"
+  ],
+  "locales": {
+    "de": {
+      "name": "Jabber",
+      "description": "Muss noch erstellt werden...",
+      "permissions": {}
+    }
+  },
+  "default_locale": "en"
 }
