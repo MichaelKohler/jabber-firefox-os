@@ -1,0 +1,65 @@
+<!------------------ Account Settings Screen ------------------>
+<section id="account-settings-panel" role="region" hidden>
+    <header class="fixed">
+        <button class="toggle-sidebar"><span class="icon icon-menu">show sidebar</span></button>
+        <menu type="toolbar">
+            <button class="settings-done"><span>Done</span></button>
+        </menu>
+        <h1>Account</h1>
+    </header>
+    <article class="settings header">
+        <ul>
+            <li>
+                <input type="email" placeholder="Jabber ID" required="">
+            </li>
+            <li>
+                <input type="password" placeholder="Password" required="">
+            </li>
+            <li>
+                <input type="text" placeholder="Nickname (optional)">
+            </li>
+            <li>
+                <label class="pack-switch">
+                    <input type="checkbox" checked>
+                    <span>Automatically connect on startup</span>
+                </label>
+            </li>
+            <li>
+                <label class="pack-switch">
+                    <input type="checkbox" checked>
+                    <span>Automatically reconnect if disconnected</span>
+                </label>
+            </li>
+            <li>
+                <label class="pack-switch">
+                    <input type="checkbox" checked>
+                    <span>Log message history</span>
+                </label>
+            </li>
+        </ul>
+    </article>
+    <!-- Advanced settings
+    <article class="settings header">
+        <ul>
+            <li>
+                <input type="text" placeholder="Host" required="">
+            </li>
+            <li>
+                <input type="text" placeholder="Port" value="5222" required="">
+            </li>
+            <li>
+                <label class="pack-switch">
+                    <input type="checkbox" checked>
+                    <span>Allow Plaintext Login</span>
+                </label>
+            </li>
+            <li>
+                <label class="pack-switch">
+                    <input type="checkbox" checked>
+                    <span>Send "Keep-alive" packets (for NAT timeouts)</span>
+                </label>
+            </li>
+        </ul>
+    </article>
+    -->
+</section>

@@ -1,0 +1,29 @@
+<!------------------ Chat Screen ------------------>
+<section id="chat" role="region" data-position="right">
+    <header class="fixed">
+        <button id="chat-back-btn"><span class="icon icon-back">back</span></button>
+        <menu type="toolbar">
+            <button id="show-contact-settings" data-icon="more"></button>
+        </menu>
+        <h1>mkohler</h1>
+    </header>
+    <article class="header" id="chat-container">
+        <div class="flex-chat">
+            <div id="messages-container">
+                <div class="message"><span class="user-1">[19:30:59] &lt;mkohler&gt;</span> Hello Ladies and Gentleman</div>
+                <div class="message"><span class="user-2">[19:31:12] &lt;Martin&gt;</span> Hi</div>
+                <div class="message"><span class="user-1">[19:35:05] &lt;mkohler&gt;</span> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore</div>
+            </div>
+            <form id="message-compose-form" role="search" class="bottom" style="background:#efefef">
+                <section class="bottom-composer-section">
+                    <div class="composer-message-input-container">
+                        <div data-placeholder="Message" id="message-input" name="message" class="js-l10n-placeholder placeholder" role="textbox" aria-multiline="true" contenteditable="true"><br></div>
+                    </div>
+                    <div class="composer-button-container">
+                        <button id="message-send-button" data-icon="send" aria-label="send" data-l10n-id="send-button" type="submit" disabled></button>
+                    </div>
+                </section>
+            </form>
+        </div>
+    </article>
+</section>
