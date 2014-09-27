@@ -39,7 +39,7 @@
     <link rel="stylesheet" href="assets/css/jabber/settings_lists.css">
     <link rel="stylesheet" href="assets/css/jabber/state_icons.css">
 </head>
-<body>
+<body ng-app="jabber">
 
     <section id="index" data-position="current">
         <section data-type="sidebar" id="sidebar">
@@ -63,8 +63,14 @@
             </nav>
         </section>
 
+    <ui-view />
+
     <script src="scripts/lib/node-xmpp-browser.js"></script>
-    <script src="scripts/chat.js"></script>
-    <script src="scripts/main.js"></script>
+    <script src="scripts/lib/angular.min.js"></script>
+    <script src="scripts/lib/angular-ui-router.min.js"></script>
+    <script src="scripts/lib/angular-ui-router.min.js"></script>
+    <script src="scripts/services.js"></script>
+    <script src="scripts/controllers.js"></script>
+    <script src="scripts/app.js"></script>
 </body>
 </html>
