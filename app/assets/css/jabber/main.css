@@ -17,3 +17,8 @@ section[role="region"] > header:first-child a,
 section[role="region"] > header:first-child button {
     color: #fff;
 }
+
+#add-contact-btn {
+  margin: 1.5rem;
+  width: calc(100% - 3rem);
+}
