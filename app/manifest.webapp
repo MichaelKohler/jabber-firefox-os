@@ -1,7 +1,7 @@
 {
   "version": "0.1.0",
   "name": "Jabber",
-  "description": "Description to be written...",
+  "description": "A Jabber client for Firefox OS. You can connect to every jabber server with it (this means you can also use Facebook Chat within this client).",
   "launch_path": "/index.html",
   "icons": {
     "16": "/assets/icons/icon16x16.png",
