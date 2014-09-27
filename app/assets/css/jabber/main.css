@@ -13,7 +13,7 @@
   height: calc(100% - 5rem);
 }
 
-section[role="region"] > header:first-child a, 
+section[role="region"] > header:first-child a,
 section[role="region"] > header:first-child button {
     color: #fff;
 }
@@ -21,4 +21,24 @@ section[role="region"] > header:first-child button {
 #add-contact-btn {
   margin: 1.5rem;
   width: calc(100% - 3rem);
+}
+
+#sidebar {
+  position: absolute;
+  width: 80%;
+  left: -80%;
+  transition: left 1s;
+}
+
+#sidebar.active {
+  left: 0;
+}
+
+#main {
+  transition: left 1s;
+  left: 0;
+}
+
+#main.off {
+  left: 80%;
 }
