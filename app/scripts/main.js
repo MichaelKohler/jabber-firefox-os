@@ -2,6 +2,7 @@
     'use strict';
     
     var themeColor = document.head.querySelector('meta[name="theme-color"]');
+    var defaultThemeColor = themeColor.content;
     
     var index = document.getElementById('index');
     var chat = document.getElementById('chat');
@@ -152,7 +153,7 @@
     }, false);
     
     document.getElementById('hide-contact-settings').addEventListener('click', function(){
-        themeColor.content = '#F97C17';
+        themeColor.content = defaultThemeColor;
         contactSettings.className = 'fade-out';
         contactSettings.hidden = true;
     }, false);
