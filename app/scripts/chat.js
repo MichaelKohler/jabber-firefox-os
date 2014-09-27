@@ -7,7 +7,7 @@ var client = new XMPP.Client({
     boshURL: window.prompt('Jabber Server URL', 'https://your-server.com:5281/http-bind/'),
     jid: window.prompt('Your Jabber ID', 'you@example.org'),
     password: window.prompt('Your password', ''),
-    preferred: 'PLAIN'
+    preferred: 'PLAIN' // <- should check "Sidebar > Connection > Allow Plaintext Login" setting
 });
 
 client.addListener(
