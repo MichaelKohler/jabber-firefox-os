@@ -116,6 +116,15 @@
         }, false);
     }
     
+    // Add contact button
+    document.getElementById('add-contact-btn').addEventListener('click', function(){
+        for(var i = 0, iLen = mainPanels.length; i < iLen; i++) {
+            mainPanels[i].hidden = true;
+            mainPanels[i].classList.remove('open-sidebar');
+        }
+        addContactPanel.hidden = false;
+    }, false);
+    
     // Start chat
     var contacts = document.querySelectorAll('.contact');
     
