@@ -107,11 +107,21 @@
         changeStatusPanel.hidden = false;
     }, false);
     
+    // Prevent context menu in contact buttons (links)
+    var contactButtons = document.querySelectorAll('#contacts-list > ul > li > a');
+    
+    for(var i = 0, iLen = contactButtons.length; i < iLen; i++) {
+        contactButtons[i].addEventListener('contextmenu', function(e){
+            e.preventDefault();
+        }, false);
+    }
+    
     // Start chat
     var contacts = document.querySelectorAll('.contact');
     
     for(var i = 0, iLen = contacts.length; i < iLen; i++) {
-        contacts[i].addEventListener('click', function(){
+        contacts[i].addEventListener('click', function(e){
+            e.preventDefault();
             chat.className = 'current';
             index.className = 'left';
         }, false);
