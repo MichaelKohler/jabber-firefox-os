@@ -26,48 +26,63 @@
     }
     
     // Sidebar
-    document.getElementById('sidebar-show-contacts').addEventListener('click', function(){
+    document.getElementById('sidebar-show-contacts').addEventListener('click', function(e){
+        e.preventDefault();
         for(var i = 0, iLen = mainPanels.length; i < iLen; i++) {
             mainPanels[i].hidden = true;
             mainPanels[i].classList.remove('open-sidebar');
         }
         contactsPanel.hidden = false;
     }, false);
-    document.getElementById('sidebar-add-contact').addEventListener('click', function(){
+    document.getElementById('sidebar-add-contact').addEventListener('click', function(e){
+        e.preventDefault();
         for(var i = 0, iLen = mainPanels.length; i < iLen; i++) {
             mainPanels[i].hidden = true;
             mainPanels[i].classList.remove('open-sidebar');
         }
         addContactPanel.hidden = false;
     }, false);
-    document.getElementById('sidebar-change-status').addEventListener('click', function(){
+    document.getElementById('sidebar-change-status').addEventListener('click', function(e){
+        e.preventDefault();
         for(var i = 0, iLen = mainPanels.length; i < iLen; i++) {
             mainPanels[i].hidden = true;
             mainPanels[i].classList.remove('open-sidebar');
         }
         changeStatusPanel.hidden = false;
     }, false);
-    document.getElementById('sidebar-account-settings').addEventListener('click', function(){
+    document.getElementById('sidebar-account-settings').addEventListener('click', function(e){
+        e.preventDefault();
         for(var i = 0, iLen = mainPanels.length; i < iLen; i++) {
             mainPanels[i].hidden = true;
             mainPanels[i].classList.remove('open-sidebar');
         }
         accountSettingsPanel.hidden = false;
     }, false);
-    document.getElementById('sidebar-connection-settings').addEventListener('click', function(){
+    document.getElementById('sidebar-connection-settings').addEventListener('click', function(e){
+        e.preventDefault();
         for(var i = 0, iLen = mainPanels.length; i < iLen; i++) {
             mainPanels[i].hidden = true;
             mainPanels[i].classList.remove('open-sidebar');
         }
         connectionSettingsPanel.hidden = false;
     }, false);
-    document.getElementById('sidebar-options').addEventListener('click', function(){
+    document.getElementById('sidebar-options').addEventListener('click', function(e){
+        e.preventDefault();
         for(var i = 0, iLen = mainPanels.length; i < iLen; i++) {
             mainPanels[i].hidden = true;
             mainPanels[i].classList.remove('open-sidebar');
         }
         optionsPanel.hidden = false;
     }, false);
+    
+    // Prevent context menu in sidebar buttons (links)
+    var sidebarButtons = document.querySelectorAll('#sidebar > nav > ul > li > a');
+    
+    for(var i = 0, iLen = sidebarButtons.length; i < iLen; i++) {
+        sidebarButtons[i].addEventListener('contextmenu', function(e){
+            e.preventDefault();
+        }, false);
+    }
     
     // Settings - All "Done" Buttons redirect to Mainscreen, normally
     // would they force a "Save Settings" Action before redirect
