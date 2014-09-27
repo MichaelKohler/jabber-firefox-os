@@ -122,6 +122,24 @@
         contactSettings.className = 'fade-out';
         contactSettings.hidden = true;
     }, false);
+    
+    // Write chat message
+    var messageSendButton = document.getElementById('messages-send-button');
+    
+    document.getElementById('messages-input').addEventListener('input', function(){
+        
+        if(this.textContent.length === 0){
+            this.classList.add('placeholder');
+            messageSendButton.disabled = true;
+        } else {
+            this.classList.remove('placeholder');
+            messageSendButton.disabled = false;
+        }
+        
+        console.log(this.textContent);
+        console.log(this.innerHTML);
+        
+    }, false);
 
     // TEST
     document.getElementById("sendTest").addEventListener("click", function() {
