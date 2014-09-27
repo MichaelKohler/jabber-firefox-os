@@ -83,7 +83,7 @@
  * placeholder management here as well.
  */
 
-#messages-input {
+#message-input {
   position: relative; /* to position its generated content */
 
   overflow: auto;
@@ -105,7 +105,7 @@
   outline: 0;
 }
 
-#messages-input:after {
+#message-input:after {
   content: attr(data-placeholder);
   position: absolute;
 
@@ -119,7 +119,7 @@
   visibility: hidden;
 }
 
-#messages-input.placeholder:after {
+#message-input.placeholder:after {
   visibility: visible;
 }
 
@@ -167,20 +167,20 @@
   -moz-user-select: none; /* without this, tapping on the element selects its content */
 }
 
-#messages-send-button {
+#message-send-button {
   height: 4rem;
   align-self: flex-end;
 }
 
-#messages-send-button:before {
+#message-send-button:before {
   color: #9B9B9B;
 }
 
-#messages-send-button[disabled] {
+#message-send-button[disabled] {
   background-blend-mode: luminosity;
   opacity: 0.625;
 }
 
-#messages-input.ignoreEvents {
+#message-input.ignoreEvents {
   pointer-events: none;
 }

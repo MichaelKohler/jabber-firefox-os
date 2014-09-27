@@ -124,9 +124,9 @@
     }, false);
     
     // Write chat message
-    var messageSendButton = document.getElementById('messages-send-button');
+    var messageSendButton = document.getElementById('message-send-button');
     
-    document.getElementById('messages-input').addEventListener('input', function(){
+    document.getElementById('message-input').addEventListener('input', function(){
         
         if(this.textContent.length === 0){
             this.classList.add('placeholder');
