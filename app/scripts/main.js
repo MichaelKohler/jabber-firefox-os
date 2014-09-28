@@ -199,6 +199,7 @@
     settings.delete('foo');
     console.log('foo in settings after delete: ' + settings.get('foo'));
 
+    // testing history.. please use ChatMessage which does this automatically!
     var history = new ChatHistory('foo@example.org');
     var currentHistory = history.getFullHistory();
     console.log('current history: ' + currentHistory);
@@ -207,4 +208,13 @@
     currentHistory = history.getFullHistory();
     console.log('current history after append: ');
     console.log(currentHistory);
+
+    // testing message
+    var message = new ChatMessage({
+        receiver: 'rec@example.org',
+        sender: 'me@example.org',
+        text: 'das ist ein test.. message!!',
+        date: new Date()
+    });
+    message.send();
 })();
