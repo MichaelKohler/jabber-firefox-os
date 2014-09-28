@@ -2,8 +2,7 @@ angular.module('jabber.controllers', [])
 .controller('AccountCtrl', function($scope, XmppSvc){
   $scope.account = {};
   $scope.connect = function() {
-    alert($scope.account.jid);
-    console.log(XmppSvc.connect());
+    client = XmppSvc.connect($scope.account);
   }
 })
 .controller('ContactsCtrl', function($scope){
