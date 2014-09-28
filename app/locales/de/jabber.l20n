@@ -1,0 +1,59 @@
+<brandName "Jabber">
+<brandDescription "Jabber client für Firefox OS">
+
+<back "Zurück">
+<done "Fertig">
+<cancel "Abbrechen">
+<optional "optional">
+
+<showSidebar "Seitenleiste anzeigen">
+<hideSidebar "Seitenleiste ausblenden">
+
+<settings "Einstellungen">
+<connection "Verbindung">
+<account "Benutzerkonto">
+<accountSetup "Benutzerkonto einrichten">
+<options "Optionen">
+<contacts "Kontakte">
+<addContact "Kontakt hinzufügen">
+<changeStatus "Status ändern">
+
+<statusOnline       "Online">
+<statusFreeForChat  "Offen für Chats">
+<statusAway         "Abwesend">
+<statusNotAvailable "Nicht verfügbar">
+<statusDoNotDisturb "Nicht stören">
+<statusInvisible    "Unsichtbar">
+<statusOffline      "Offline">
+
+<jabberID "Jabber ID">
+<password "Passwort">
+<nickname {
+ *name:     "Spitzname",
+  optional: "Spitzname ({{ optional }})"
+}>
+<host "Host">
+<port "Port">
+<requestAuthorizationWhenAdding "Autorisierung beim Hinzufügen anfordern">
+<automaticallyConnectOnStartup "Automatisch beim Start verbinden">
+<automaticallyReconnectIfDisconnected "Bei Unterbrechung automatisch wieder verbinden">
+<logMessageHistory "Nachrichtenverlauf speichern">
+<allowPlaintextLogin "Klartext-Login zulassen">
+<sendKeepAlivePackets "&quot;Keep-alive&quot;-Pakete senden (für NAT-Timeouts)">
+<autoAuthorizeContacts "Kontakte automatisch autorisieren">
+<notifyWhenAuthorizationWasRecieved "Benachrichtigung senden, wenn Autorisierung erhalten wurde">
+<enterKeySendsChatMessage "Eingabetaste sendet Chat-Nachricht">
+<autoscrollMessagesWindow "Nachrichtenfenster automatisch scrollen">
+<showNotificationEvenIfJabberAppIsOpened "Auch wenn die Jabber App geöffnet ist Benachrichtigungen anzeigen">
+<showChatPanelOnRecievingNewMessage "Beim Empfangen neuer Nachrichten das Chat-Panel anzeigen">
+<clearChatContentsOneHourAfterTheChatPanelWasClosed "Eine Stunde nach dem Schließen des Chat-Panels den Nachrichtenverlauf löschen">
+<playSounds "Töne abspielen">
+<playSoundsWhenAwayNotAvailableOrOffline "Töne abspielen wenn Abwesend, nicht verfügbar oder offline">
+<enableContactIsTypingEvents "&quot;Kontakt schreibt gerade…&quot; Ereignisse aktivieren">
+
+<message "Nachricht">
+<send "senden">
+<userSettingsHeadline "Einstellungen für {{ $nickname }}">
+<clearChat "Chat löschen">
+<showChat history "Nachrichtenverlauf anzeigen">
+<muteWithUsername "{{ $nickname }} stummschalten">

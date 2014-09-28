@@ -1,0 +1,59 @@
+<brandName "Jabber">
+<brandDescription "Jabber client for Firefox OS">
+
+<back "Back">
+<done "Done">
+<cancel "Cancel">
+<optional "optional">
+
+<showSidebar "Show Sidebar">
+<hideSidebar "Hide Sidebar">
+
+<settings "Settings">
+<connection "Connection">
+<account "Account">
+<accountSetup "Account Setup">
+<options "Options">
+<contacts "Contacts">
+<addContact "Add Contact">
+<changeStatus "Change Status">
+
+<statusOnline       "Online">
+<statusFreeForChat  "Free for Chat">
+<statusAway         "Away">
+<statusNotAvailable "Not Available">
+<statusDoNotDisturb "Do not Disturb">
+<statusInvisible    "Invisible">
+<statusOffline      "Offline">
+
+<jabberID "Jabber ID">
+<password "Password">
+<nickname {
+ *name:     "Nickname",
+  optional: "Nickname ({{ optional }})"
+}>
+<host "Host">
+<port "Port">
+<requestAuthorizationWhenAdding "Request authorization when adding">
+<automaticallyConnectOnStartup "Automatically connect on startup">
+<automaticallyReconnectIfDisconnected "Automatically reconnect if disconnected">
+<logMessageHistory "Log message history">
+<allowPlaintextLogin "Allow Plaintext Login">
+<sendKeepAlivePackets "Send &quot;Keep-alive&quot; packets (for NAT timeouts)">
+<autoAuthorizeContacts "Auto-authorize contacts">
+<notifyWhenAuthorizationWasRecieved "Notify when authorization was recieved">
+<enterKeySendsChatMessage "Enter key sends chat message">
+<autoscrollMessagesWindow "Autoscroll messages window">
+<showNotificationEvenIfJabberAppIsOpened "Show notifications even if Jabber app is opened">
+<showChatPanelOnRecievingNewMessage "Show chat panel on recieving new message">
+<clearChatContentsOneHourAfterTheChatPanelWasClosed "Clear chat contents one hour after the chat panel was closed">
+<playSounds "Play sounds">
+<playSoundsWhenAwayNotAvailableOrOffline "Play sounds when Away, Not Available or Offline">
+<enableContactIsTypingEvents "Enable &quot;Contact is typing…&quot; events">
+
+<message "Message">
+<send "send">
+<userSettingsHeadline "Settings for {{ $nickname }}">
+<clearChat "Clear chat">
+<showChat history "Show chat history">
+<muteWithUsername "Mute {{ $nickname }}">
