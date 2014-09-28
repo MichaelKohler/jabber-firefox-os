@@ -1,0 +1,32 @@
+<!------------------ Main Screen (Contacts) ------------------>
+<section id="contacts-panel" role="region">
+    <header class="fixed">
+        <button class="toggle-sidebar" snap-toggle="left"><span class="icon icon-menu">show sidebar</span></button>
+        <menu type="toolbar">
+            <button id="show-change-status-btn"><span class="icon state-icon state-online">Change Status</span></button>
+        </menu>
+        <h1>Martin</h1>
+    </header>
+    <article class="scrollable header">
+        <div id="contacts-list" data-type="list">
+            <ul>
+                <li>
+                    <a href="#" class="contact state-icon state-online">
+                        <p>mkohler</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="contact state-icon state-away">
+                        <p>SunboX</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="contact state-icon state-offline">
+                        <p>john.doe@jabber.domain.tld</p>
+                    </a>
+                </li>
+            </ul>
+            <button id="add-contact-btn">Add Contact</button>
+        </div>
+    </article>
+</section>

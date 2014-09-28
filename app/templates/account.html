@@ -1,0 +1,71 @@
+<!------------------ Account Settings Screen ------------------>
+<section id="account-settings-panel" role="region">
+    <header class="fixed">
+        <button class="toggle-sidebar" snap-toggle="left"><span class="icon icon-menu">show sidebar</span></button>
+        <menu type="toolbar">
+            <button class="settings-done"><span>Done</span></button>
+        </menu>
+        <h1>Account</h1>
+    </header>
+    <article class="settings header">
+        <ul>
+            <li>
+                <input type="email" ng-model="account.jid" placeholder="you@example.org" required="">
+            </li>
+            <li>
+                <input type="password" ng-model="account.password" placeholder="Password" required="">
+            </li>
+            <li>
+                <input type="url" ng-model="account.serverUrl" placeholder="https://example.org/http-bind" required="">
+            </li>
+            <li>
+                <input type="text" ng-model="account.nickname" placeholder="Nickname (optional)">
+            </li>
+            <li>
+              <button ng-click="connect()">Connect</button>
+            </li>
+            <!--li>
+                <label class="pack-switch">
+                    <input type="checkbox" ng-model="account.autoconnect" checked>
+                    <span>Automatically connect on startup</span>
+                </label>
+            </li>
+            <li>
+                <label class="pack-switch">
+                    <input type="checkbox" ng-model="auto-reconnect" checked>
+                    <span>Automatically reconnect if disconnected</span>
+                </label>
+            </li>
+            <li>
+                <label class="pack-switch">
+                    <input type="checkbox" checked>
+                    <span>Log message history</span>
+                </label>
+            </li-->
+        </ul>
+    </article>
+    <!-- Advanced settings
+    <article class="settings header">
+        <ul>
+            <li>
+                <input type="text" placeholder="Host" required="">
+            </li>
+            <li>
+                <input type="text" placeholder="Port" value="5222" required="">
+            </li>
+            <li>
+                <label class="pack-switch">
+                    <input type="checkbox" checked>
+                    <span>Allow Plaintext Login</span>
+                </label>
+            </li>
+            <li>
+                <label class="pack-switch">
+                    <input type="checkbox" checked>
+                    <span>Send "Keep-alive" packets (for NAT timeouts)</span>
+                </label>
+            </li>
+        </ul>
+    </article>
+    -->
+</section>
