@@ -28,8 +28,8 @@
         localStorage.setItem(storageKey, item);
     }
 
-    StorageHandler.prototype.remove = function(object) {
-        localStorage.removeItem(object);
+    StorageHandler.prototype.remove = function(key) {
+        localStorage.removeItem(key);
     }
 
     window.StorageHandler = StorageHandler;
