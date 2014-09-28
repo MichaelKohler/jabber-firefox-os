@@ -11,6 +11,7 @@
                 storage.save(content);
                 var result = storage.get('test-jabber-key');
                 result.should.equal(content);
+                storage.remove('test-jabber-key');
             });
             it('Saving object with setting the key first should work', function () {
                 var storage = new StorageHandler('test-jabber-key');
@@ -18,15 +19,21 @@
                 storage.save(object);
                 var result = storage.get('test-jabber-key');
                 result.should.eql(object);
+                storage.remove('test-jabber-key');
             });
             it('Getting value without key should work when key was set first', function () {
-                // key was set by previous test so we don't need to save it first
                 var storage = new StorageHandler('test-jabber-key');
+                var object = { test: 'foo' };
+                storage.save(object);
                 var result = storage.get();
                 result.should.eql({ test: 'foo' });
+                storage.remove('test-jabber-key');
             });
             it('Getting value with key should work without setting the key first', function () {
-                var storage = new StorageHandler();
+                var storage = new StorageHandler('test-jabber-key');
+                var object = { test: 'foo' };
+                storage.save(object);
+                storage = new StorageHandler();
                 var result = storage.get('test-jabber-key');
                 result.should.eql({ test: 'foo' });
             });
@@ -46,9 +53,97 @@
             it('Removing key should work', function () {
                 // foo was set by the previous test
                 var storage = new StorageHandler('foo');
+                storage.save('foo', 'test')
                 storage.remove('foo');
                 var result = storage.get('foo');
                 result.should.eql({});
+            });
+        });
+
+        describe('Settings', function () {
+            it('Setting and getting value should work', function () {
+                var settings = new SettingsHandler();
+                settings.set('foo', 'foobar');
+                var result = settings.get('foo');
+                result.should.eql('foobar');
+                settings.delete('foo');
+            });
+            it('Delete value should work', function () {
+                var settings = new SettingsHandler();
+                settings.delete('foo');
+                var result = settings.get('foo');
+                chai.expect(result).to.be.undefined;
+            });
+            it('Resetting value should change the stored value', function () {
+                var settings = new SettingsHandler();
+                settings.set('foo', 'test');
+                settings.reset();
+                var result = settings.get('foo');
+                result.should.not.eql('test');
+                settings.delete('foo');
+            });
+            it('Getting non-existing setting should return undefined', function () {
+                var settings = new SettingsHandler();
+                var result = settings.get('blablablabla');
+                chai.expect(result).to.be.undefined;
+            });
+        });
+
+        describe('ChatHistory', function () {
+            it('Appending message to non-existing conversation should create it', function () {
+                var storage = new StorageHandler();
+                storage.remove('jabber-messages-test@example.org--test');
+                var chatHistory = new ChatHistory('test@example.org--test');
+                var message = { text: 'testmessage' };
+                chatHistory.appendMessage(message);
+                var history = chatHistory.getFullHistory();
+                history.should.eql([ message ]);
+            });
+            it('Appending message to existing conversation should append it and getting it should return everything', function () {
+                new StorageHandler().remove('jabber-messages-test@example.org--test');
+                var chatHistory = new ChatHistory('test@example.org--test');
+                var message = { text: 'testmessage' };
+                chatHistory.appendMessage(message);
+                var message2 = { text: 'testmessage2' };
+                chatHistory.appendMessage(message2);
+                var history = chatHistory.getFullHistory();
+                history.should.eql([ message, message2 ]);
+            });
+        });
+
+        describe('ChatMessage', function () {
+            it('Message should be populated correctly', function () {
+                var date = Date.now();
+                var message = new ChatMessage({
+                    sender: 'me',
+                    receiver: 'you',
+                    text: 'testtext',
+                    date: date
+                });
+                message.sender.should.eql('me');
+                message.receiver.should.eql('you');
+                message.text.should.eql('testtext');
+                message.date.should.eql(date);
+            });
+            it('Message date should be populated correctly if not provided', function () {
+                var message = new ChatMessage({ });
+                chai.expect(message.date).not.to.be.undefined;
+            });
+            it('Message should be saved to history after send', function () {
+                var message = new ChatMessage({
+                    sender: 'me2@example.org--test',
+                    receiver: 'you2@example.org--test',
+                    text: 'testtext',
+                    date: Date.now()
+                });
+                message.send();
+                var history = new ChatHistory(message.sender);
+                var result = history.getFullHistory();
+                result[0].sender.should.eql(message.sender);
+                result[0].receiver.should.eql(message.receiver);
+                result[0].text.should.eql(message.text);
+                result[0].date.should.eql(message.date);
+                history.deleteAll();
             });
         });
     });

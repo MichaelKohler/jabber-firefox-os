@@ -16,11 +16,12 @@
             object = JSON.parse(item);
         }
         catch (exception) {
-            console.error(exception.message);
+            console.warn(exception.message);
+            console.warn(item);
             return {};
         }
 
-        return object;
+        return object || {};
     }
 
     StorageHandler.prototype.save = function(object) {

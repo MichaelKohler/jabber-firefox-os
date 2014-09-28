@@ -16,7 +16,7 @@
 
     ChatHistory.prototype.appendMessage = function(message) {
         var history = storage.get(historyName);
-        if (history) {
+        if (history[0]) {
             history.push(message);
         }
         else {
@@ -24,6 +24,10 @@
             history = [ message ];
         }
         storage.save(history);
+    }
+
+    ChatHistory.prototype.deleteAll = function() {
+        storage.remove(historyName);
     }
 
     window.ChatHistory = ChatHistory;

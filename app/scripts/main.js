@@ -177,7 +177,6 @@
     }, false);
 
     // TEST
-
     /*document.getElementById('sendTest').addEventListener('click', function() {
         var stanza = new XMPP.Element('message', {
             to: window.prompt('Send message to?', 'somebody@example.org'), 
@@ -186,35 +185,4 @@
         
         client.send(stanza);
     });*/
-
-    var notHandler = new NotificationHandler();
-    notHandler.send();
-
-    var settings = new SettingsHandler();
-    settings.load();
-    settings.set('foo', 'bar');
-    console.log('foo in settings: ' + settings.get('foo'));
-    settings.reset();
-    console.log('foo in settings after reset: ' + settings.get('foo'));
-    settings.delete('foo');
-    console.log('foo in settings after delete: ' + settings.get('foo'));
-
-    // testing history.. please use ChatMessage which does this automatically!
-    var history = new ChatHistory('foo@example.org');
-    var currentHistory = history.getFullHistory();
-    console.log('current history: ' + currentHistory);
-    var message = { sender: 'foo@example.org', text: 'das ist die erste Nachricht!' };
-    history.appendMessage(message);
-    currentHistory = history.getFullHistory();
-    console.log('current history after append: ');
-    console.log(currentHistory);
-
-    // testing message
-    var message = new ChatMessage({
-        receiver: 'rec@example.org',
-        sender: 'me@example.org',
-        text: 'das ist ein test.. message!!',
-        date: new Date()
-    });
-    message.send();
 })();

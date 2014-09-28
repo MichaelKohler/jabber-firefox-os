@@ -29,6 +29,7 @@
 
     SettingsHandler.prototype.delete = function(key) {
         delete settings[key];
+        this.save();
     }
 
     SettingsHandler.prototype.reset = function() {
