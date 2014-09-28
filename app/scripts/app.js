@@ -1,4 +1,4 @@
-angular.module('jabber', ['snap', 'ui.router', 'jabber.controllers', 'jabber.services'])
+angular.module('jabber', ['ui.router', 'jabber.controllers', 'jabber.services'])
 .config(function($stateProvider, $urlRouterProvider) {
   $stateProvider
     .state('contacts', {
@@ -7,9 +7,9 @@ angular.module('jabber', ['snap', 'ui.router', 'jabber.controllers', 'jabber.ser
       controller: 'ContactsCtrl'
     })
 
-    .state('account-settings.html', {
+    .state('account', {
       url: '/account',
-      templateUrl: 'templates/account-settings.html',
+      templateUrl: 'templates/account.html',
       controller: 'AccountCtrl'
     });
 
