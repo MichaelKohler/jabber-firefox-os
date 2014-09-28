@@ -1,7 +1,7 @@
 <!------------------ Account Settings Screen ------------------>
-<section id="account-settings-panel" role="region" hidden>
+<section id="account-settings-panel" role="region">
     <header class="fixed">
-        <button class="toggle-sidebar"><span class="icon icon-menu">show sidebar</span></button>
+        <button class="toggle-sidebar" snap-toggle="left"><span class="icon icon-menu">show sidebar</span></button>
         <menu type="toolbar">
             <button class="settings-done"><span>Done</span></button>
         </menu>
@@ -10,23 +10,29 @@
     <article class="settings header">
         <ul>
             <li>
-                <input type="email" placeholder="Jabber ID" required="">
+                <input type="email" ng-model="account.jid" placeholder="you@example.org" required="">
             </li>
             <li>
-                <input type="password" placeholder="Password" required="">
+                <input type="password" ng-model="account.password" placeholder="Password" required="">
             </li>
             <li>
-                <input type="text" placeholder="Nickname (optional)">
+                <input type="url" ng-model="account.serverUrl" placeholder="https://example.org/http-bind" required="">
             </li>
             <li>
+                <input type="text" ng-model="account.nickname" placeholder="Nickname (optional)">
+            </li>
+            <li>
+              <button ng-click="connect()">Connect</button>
+            </li>
+            <!--li>
                 <label class="pack-switch">
-                    <input type="checkbox" checked>
+                    <input type="checkbox" ng-model="account.autoconnect" checked>
                     <span>Automatically connect on startup</span>
                 </label>
             </li>
             <li>
                 <label class="pack-switch">
-                    <input type="checkbox" checked>
+                    <input type="checkbox" ng-model="auto-reconnect" checked>
                     <span>Automatically reconnect if disconnected</span>
                 </label>
             </li>
@@ -35,7 +41,7 @@
                     <input type="checkbox" checked>
                     <span>Log message history</span>
                 </label>
-            </li>
+            </li-->
         </ul>
     </article>
     <!-- Advanced settings
