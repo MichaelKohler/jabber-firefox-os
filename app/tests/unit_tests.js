@@ -1,4 +1,15 @@
 (function () {
     'use strict';
-    console.log('yeah, let\'s test something');
+    mocha.setup('bdd');
+    chai.should();
+
+    describe('Unit Tests', function () {
+        describe('Storage', function () {
+            it('....', function () {
+                'foo'.should.equal('foo');
+            });
+        });
+    });
+
+    mocha.run();
 }());

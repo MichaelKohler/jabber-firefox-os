@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>Automated Test Suite</title>
+  <link rel="stylesheet" href="vendor/mocha.css" type="text/css"/>
+  <script src="vendor/chai.js"></script>
+  <script src="vendor/mocha.js"></script>
+
+  <!-- App scripts -->
+  <script src="../scripts/chat_history.js" defer></script>
+  <script src="../scripts/chat_message.js" defer></script>
+  <script src="../scripts/notification.js" defer></script>
+  <script src="../scripts/storage.js" defer></script>
+  <script src="../scripts/settings.js" defer></script>
+
+  <!-- Tests -->
+  <script src="unit_tests.js" defer></script>
+</head>
+<body>
+  <h1>Jabber Firefox OS Test Suite</h1>
+  <div id="mocha"></div>
+</body>
+</html>
