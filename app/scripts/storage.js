@@ -24,9 +24,10 @@
         return object || {};
     }
 
-    StorageHandler.prototype.save = function(object) {
+    StorageHandler.prototype.save = function(object, key) {
+        var keyToSave = key || storageKey;
         var item = JSON.stringify(object);
-        localStorage.setItem(storageKey, item);
+        localStorage.setItem(keyToSave, item);
     }
 
     StorageHandler.prototype.remove = function(key) {

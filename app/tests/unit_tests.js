@@ -15,7 +15,7 @@
             });
             it('Saving object with setting the key first should work', function () {
                 var storage = new StorageHandler('test-jabber-key');
-                var object = { test: 'foo' };
+                var object = { test: 'bla1' };
                 storage.save(object);
                 var result = storage.get('test-jabber-key');
                 result.should.eql(object);
@@ -23,19 +23,20 @@
             });
             it('Getting value without key should work when key was set first', function () {
                 var storage = new StorageHandler('test-jabber-key');
-                var object = { test: 'foo' };
+                var object = { test: 'bla2' };
                 storage.save(object);
                 var result = storage.get();
-                result.should.eql({ test: 'foo' });
+                result.should.eql(object);
                 storage.remove('test-jabber-key');
             });
             it('Getting value with key should work without setting the key first', function () {
                 var storage = new StorageHandler('test-jabber-key');
-                var object = { test: 'foo' };
+                var object = { test: 'bla3' };
                 storage.save(object);
                 storage = new StorageHandler();
                 var result = storage.get('test-jabber-key');
-                result.should.eql({ test: 'foo' });
+                result.should.eql(object);
+                storage.remove('test-jabber-key');
             });
             it('Getting non-existing key should return an empty object', function () {
                 var storage = new StorageHandler();
@@ -49,11 +50,11 @@
                 var storage = new StorageHandler();
                 var result = storage.get('foo');
                 result.should.eql({});
+                storage.remove('foo');
             });
             it('Removing key should work', function () {
-                // foo was set by the previous test
                 var storage = new StorageHandler('foo');
-                storage.save('foo', 'test')
+                storage.save('test')
                 storage.remove('foo');
                 var result = storage.get('foo');
                 result.should.eql({});
@@ -66,7 +67,6 @@
                 settings.set('foo', 'foobar');
                 var result = settings.get('foo');
                 result.should.eql('foobar');
-                settings.delete('foo');
             });
             it('Delete value should work', function () {
                 var settings = new SettingsHandler();
@@ -80,7 +80,6 @@
                 settings.reset();
                 var result = settings.get('foo');
                 result.should.not.eql('test');
-                settings.delete('foo');
             });
             it('Getting non-existing setting should return undefined', function () {
                 var settings = new SettingsHandler();
@@ -98,9 +97,11 @@
                 chatHistory.appendMessage(message);
                 var history = chatHistory.getFullHistory();
                 history.should.eql([ message ]);
+                storage.remove('jabber-messages-test@example.org--test');
             });
             it('Appending message to existing conversation should append it and getting it should return everything', function () {
-                new StorageHandler().remove('jabber-messages-test@example.org--test');
+                var storage = new StorageHandler();
+                storage.remove('jabber-messages-test@example.org--test');
                 var chatHistory = new ChatHistory('test@example.org--test');
                 var message = { text: 'testmessage' };
                 chatHistory.appendMessage(message);
@@ -108,6 +109,7 @@
                 chatHistory.appendMessage(message2);
                 var history = chatHistory.getFullHistory();
                 history.should.eql([ message, message2 ]);
+                storage.remove('jabber-messages-test@example.org--test');
             });
         });
 

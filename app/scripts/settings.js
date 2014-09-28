@@ -15,7 +15,7 @@
     }
 
     SettingsHandler.prototype.save = function() {
-        storage.save(settings);
+        storage.save(settings, settingsKey);
     }
 
     SettingsHandler.prototype.set = function(key, value) {
