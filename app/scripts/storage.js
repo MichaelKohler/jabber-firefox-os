@@ -28,5 +28,9 @@
         localStorage.setItem(storageKey, item);
     }
 
+    StorageHandler.prototype.remove = function(object) {
+        localStorage.removeItem(object);
+    }
+
     window.StorageHandler = StorageHandler;
 }());
