@@ -4,19 +4,18 @@
     'use strict';
     var settings = {};
     var settingsKey = "jabber-settings";
+    var storage = new StorageHandler();
 
     function SettingsHandler() {
         this.load();
     }
 
     SettingsHandler.prototype.load = function() {
-        var item = localStorage.getItem(settingsKey);
-        settings = JSON.parse(item);
+        settings = storage.get(settingsKey);
     }
 
     SettingsHandler.prototype.save = function() {
-        var item = JSON.stringify(settings);
-        localStorage.setItem(settingsKey, item);
+        storage.save(settings);
     }
 
     SettingsHandler.prototype.set = function(key, value) {
