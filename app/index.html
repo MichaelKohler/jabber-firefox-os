@@ -19,7 +19,6 @@
     <link rel="stylesheet" href="assets/css/buildingblocks/progress_activity.css">
     <link rel="stylesheet" href="assets/css/buildingblocks/scrolling.css">
     <link rel="stylesheet" href="assets/css/buildingblocks/toolbars.css">
-
     <!-- Icons -->
     <link rel="stylesheet" href="assets/css/buildingblocks/gaia-icons/style-embedded.css">
 
@@ -32,6 +31,9 @@
     <!-- Additional markup to make Building Blocks kind of cross browser -->
     <!--link rel="stylesheet" href="cross_browser.css"-->
 
+    <!-- Angular Snap-Drawer -->
+    <link rel="stylesheet" href="assets/css/angular-snap.min.css">
+
     <!-- Jabber CSS -->
     <link rel="stylesheet" href="assets/css/jabber/main.css">
     <link rel="stylesheet" href="assets/css/jabber/panel_animations.css">
@@ -40,35 +42,38 @@
     <link rel="stylesheet" href="assets/css/jabber/state_icons.css">
 </head>
 <body ng-app="jabber">
+    <snap-drawer>
+      <section data-type="sidebar">
+          <header>
+              <menu type="toolbar">
+                  <button class="toggle-sidebar">Done</button>
+              </menu>
+              <h1>Settings</h1>
+          </header>
+          <nav>
+              <ul>
+                  <li><a href="#" id="sidebar-show-contacts">Contacts</a></li>
+                  <li><a href="#" id="sidebar-add-contact">Add Contact</a></li>
+                  <li><a href="#" id="sidebar-change-status">Change Status</a></li>
+              </ul>
+              <h2>Settings</h2>
+              <ul>
+                  <li><a href="#" id="sidebar-account-settings">Account</a></li>
+                  <li><a href="#" id="sidebar-options">General</a></li>
+              </ul>
+          </nav>
+      </section>
+    </snap-drawer>
 
-    <section id="index" data-position="current">
-        <section data-type="sidebar" id="sidebar">
-            <header>
-                <menu type="toolbar">
-                    <button class="toggle-sidebar">Done</button>
-                </menu>
-                <h1>Settings</h1>
-            </header>
-            <nav>
-                <ul>
-                    <li><a href="#" id="sidebar-show-contacts">Contacts</a></li>
-                    <li><a href="#" id="sidebar-add-contact">Add Contact</a></li>
-                    <li><a href="#" id="sidebar-change-status">Change Status</a></li>
-                </ul>
-                <h2>Settings</h2>
-                <ul>
-                    <li><a href="#" id="sidebar-account-settings">Account</a></li>
-                    <li><a href="#" id="sidebar-options">General</a></li>
-                </ul>
-            </nav>
-        </section>
-
-    <ui-view id="main" />
+    <snap-content>
+      <ui-view></ui-view>
+    </snap-content>
 
     <script src="scripts/lib/node-xmpp-browser.js"></script>
+    <script src="scripts/lib/snap.min.js"></script>
     <script src="scripts/lib/angular.min.js"></script>
     <script src="scripts/lib/angular-ui-router.min.js"></script>
-    <script src="scripts/lib/angular-ui-router.min.js"></script>
+    <script src="scripts/lib/angular-snap.min.js"></script>
     <script src="scripts/services.js"></script>
     <script src="scripts/controllers.js"></script>
     <script src="scripts/app.js"></script>
