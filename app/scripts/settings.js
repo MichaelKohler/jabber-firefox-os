@@ -6,7 +6,8 @@
     var settingsKey = "jabber-settings";
     var storage = new StorageHandler();
 
-    function SettingsHandler() {
+    function SettingsHandler(key) {
+        if (key) { settingsKey = key; }
         this.load();
     }
 

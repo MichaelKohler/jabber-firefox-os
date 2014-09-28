@@ -63,28 +63,32 @@
 
         describe('Settings', function () {
             it('Setting and getting value should work', function () {
-                var settings = new SettingsHandler();
+                var settings = new SettingsHandler('jabber-settings-test');
                 settings.set('foo', 'foobar');
                 var result = settings.get('foo');
                 result.should.eql('foobar');
+                new StorageHandler().remove('jabber-settings-test');
             });
             it('Delete value should work', function () {
-                var settings = new SettingsHandler();
+                var settings = new SettingsHandler('jabber-settings-test');
                 settings.delete('foo');
                 var result = settings.get('foo');
                 chai.expect(result).to.be.undefined;
+                new StorageHandler().remove('jabber-settings-test');
             });
             it('Resetting value should change the stored value', function () {
-                var settings = new SettingsHandler();
+                var settings = new SettingsHandler('jabber-settings-test');
                 settings.set('foo', 'test');
                 settings.reset();
                 var result = settings.get('foo');
                 result.should.not.eql('test');
+                new StorageHandler().remove('jabber-settings-test');
             });
             it('Getting non-existing setting should return undefined', function () {
-                var settings = new SettingsHandler();
+                var settings = new SettingsHandler('jabber-settings-test');
                 var result = settings.get('blablablabla');
                 chai.expect(result).to.be.undefined;
+                new StorageHandler().remove('jabber-settings-test');
             });
         });
 
