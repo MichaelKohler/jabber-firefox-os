@@ -177,6 +177,7 @@
     }, false);
 
     // TEST
+
     /*document.getElementById('sendTest').addEventListener('click', function() {
         var stanza = new XMPP.Element('message', {
             to: window.prompt('Send message to?', 'somebody@example.org'), 
@@ -189,4 +190,12 @@
     var notHandler = new NotificationHandler();
     notHandler.send();
 
+    var settings = new SettingsHandler();
+    settings.load();
+    settings.set('foo', 'bar');
+    console.log('foo in settings: ' + settings.get('foo'));
+    settings.reset();
+    console.log('foo in settings after reset: ' + settings.get('foo'));
+    settings.delete('foo');
+    console.log('foo in settings after delete: ' + settings.get('foo'));
 })();
