@@ -7,9 +7,9 @@ angular.module('jabber', ['ui.router', 'jabber.controllers', 'jabber.services'])
       controller: 'ContactsCtrl'
     })
 
-    .state('account-settings.html', {
+    .state('account', {
       url: '/account',
-      templateUrl: 'templates/account-settings.html',
+      templateUrl: 'templates/account.html',
       controller: 'AccountCtrl'
     });
 
