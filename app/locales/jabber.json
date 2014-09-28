@@ -1,0 +1,9 @@
+{
+  "locales": [
+    "en-US",
+    "de"
+  ],
+  "resources": [
+    "/locales/{{locale}}/jabber.l20n"
+  ]
+}
