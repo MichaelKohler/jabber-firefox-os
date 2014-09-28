@@ -15,7 +15,8 @@
   },
   "type": "privileged",
   "permissions": {
-    "systemXHR": {"description": "To communicate with your Jabber Server(s)"}
+    "systemXHR": {"description": "To communicate with your Jabber Server(s)"},
+    "desktop-notification": {"description": "Show notifications for new messages and other important events"}
   },
   "installs_allowed_from": [
     "*"
