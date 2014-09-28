@@ -1,3 +1,4 @@
+[![Stories in Ready](https://badge.waffle.io/michaelkohler/jabber-firefox-os.png?label=ready&title=Ready)](https://waffle.io/michaelkohler/jabber-firefox-os)
 # Jabber
 This is a Jabber client for Firefox OS. You can connect to every jabber server with it (this means you can also use Facebook Chat within this client).
 
