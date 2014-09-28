@@ -198,4 +198,13 @@
     console.log('foo in settings after reset: ' + settings.get('foo'));
     settings.delete('foo');
     console.log('foo in settings after delete: ' + settings.get('foo'));
+
+    var history = new ChatHistory('foo@example.org');
+    var currentHistory = history.getFullHistory();
+    console.log('current history: ' + currentHistory);
+    var message = { sender: 'foo@example.org', text: 'das ist die erste Nachricht!' };
+    history.appendMessage(message);
+    currentHistory = history.getFullHistory();
+    console.log('current history after append: ');
+    console.log(currentHistory);
 })();
