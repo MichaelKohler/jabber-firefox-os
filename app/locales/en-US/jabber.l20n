@@ -39,7 +39,9 @@
 <automaticallyReconnectIfDisconnected "Automatically reconnect if disconnected">
 <logMessageHistory "Log message history">
 <allowPlaintextLogin "Allow Plaintext Login">
-<sendKeepAlivePackets "Send &quot;Keep-alive&quot; packets (for NAT timeouts)">
+<sendKeepAlivePackets """
+  Send "Keep-alive" packets (for NAT timeouts)
+""">
 <autoAuthorizeContacts "Auto-authorize contacts">
 <notifyWhenAuthorizationWasRecieved "Notify when authorization was recieved">
 <enterKeySendsChatMessage "Enter key sends chat message">
@@ -49,7 +51,9 @@
 <clearChatContentsOneHourAfterTheChatPanelWasClosed "Clear chat contents one hour after the chat panel was closed">
 <playSounds "Play sounds">
 <playSoundsWhenAwayNotAvailableOrOffline "Play sounds when Away, Not Available or Offline">
-<enableContactIsTypingEvents "Enable &quot;Contact is typing…&quot; events">
+<enableContactIsTypingEvents """
+  Enable "Contact is typing…" events
+""">
 
 <message "Message">
 <send "send">
