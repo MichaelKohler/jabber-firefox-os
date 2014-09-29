@@ -2,9 +2,9 @@
     <header class="fixed">
         <button class="toggle-sidebar" snap-toggle="left"><span class="icon icon-menu" data-l20n="showSidebar">Show Sidebar</span></button>
         <menu type="toolbar">
-            <button id="show-change-status-btn"><span class="icon state-icon" ng-class="status" data-l20n="changeStatus">Change Status</span></button>
+            <button id="show-change-status-btn"><span class="icon state-icon" ng-class="'state-' + status" data-l20n="changeStatus">Change Status</span></button>
         </menu>
-        <h1>Martin</h1>
+        <h1>{{user}}</h1>
     </header>
     <article class="scrollable header">
         <div id="contacts-list" data-type="list">
