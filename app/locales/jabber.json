@@ -3,7 +3,8 @@
     "en-US",
     "de"
   ],
+  "default_locale": "en-US",
   "resources": [
-    "/locales/{{locale}}/jabber.l20n"
+    "{{locale}}/jabber.l20n"
   ]
 }

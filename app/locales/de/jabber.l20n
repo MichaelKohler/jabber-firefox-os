@@ -17,6 +17,7 @@
 <contacts "Kontakte">
 <addContact "Kontakt hinzufügen">
 <changeStatus "Status ändern">
+<general "Allgemein">
 
 <statusOnline       "Online">
 <statusFreeForChat  "Offen für Chats">
