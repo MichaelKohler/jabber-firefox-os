@@ -13,15 +13,15 @@ section[role="region"] > header:first-child .state-icon:before {
 }
 
 [data-type="list"] li > .state-icon:before {
-  
+
   pointer-events: none;
   position: absolute;
   top: calc(50% - 1.5rem);
   right: -0.5rem;
 }
 
-.settings ul li > label.pack-checkbox.state-icon > span:after, 
-.settings ul li > label.pack-radio.state-icon > span:after, 
+.settings ul li > label.pack-checkbox.state-icon > span:after,
+.settings ul li > label.pack-radio.state-icon > span:after,
 .settings ul li > label.pack-switch.state-icon > input ~ span:after {
     left: auto;
     right: 6rem;
@@ -34,9 +34,9 @@ section[role="region"] > header:first-child .state-icon:before {
 }
 
 .state-online:before { background-position: 0 0; }
-.state-free-for-chat:before { background-position: 0 0; }
-.state-away:before { background-position: 0 -60px; }
-.state-not-available:before { background-position: 0 -30px; }
-.state-do-not-disturb:before { background-position: 0 -30px; }
+.state-chat:before { background-position: 0 0; }
+.state-away:before { background-position: 0 -30px; }
+.state-xa:before { background-position: 0 -30px; }
+.state-dnd:before { background-position: 0 -60px; }
 .state-invisible:before { background-position: 0 -90px; }
 .state-offline:before { background-position: 0 -90px; }
