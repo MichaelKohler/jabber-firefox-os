@@ -1,12 +1,31 @@
 angular.module('jabber.services', [])
 .factory('XmppSvc', function() {
-  var client = null;
+  var client = null,
+      status = 'offline',
+      account = {},
+      roster = [],
+      listeners = {};
+
+  var handleResult = function(stanza) {
+    console.log(stanza.attrs.id, stanza.attrs.id == 'roster_0')
+    if(stanza.attrs.id == 'roster_0') {
+      // We've received the list of contacts
+
+      var contacts = stanza.getChild('query').getChildren('item');
+      for(var i=0, len = contacts.length; i<len; i++) {
+        roster.push({nick: contacts[i].attrs.name, jid: contacts[i].attrs.jid, status: 'offline'});
+      }
+      if(listeners.contactsReady) listeners.contactsReady(roster);
+    }
+  }
 
   var setupDefaultListeners = function(client) {
     client.addListener(
         'online',
         function() {
             console.log('online');
+            client.send(new XMPP.Element('presence'));
+            status = 'online';
         }
     );
 
@@ -15,8 +34,18 @@ angular.module('jabber.services', [])
         function(e) {
             console.error(e);
             alert('Error: ' + e);
+            status = 'offline';
         }
     );
+
+    client.on('stanza', function(stanza) {
+      console.log('stanza:', stanza);
+      if (stanza.is('message')) {
+        //
+      } else if(stanza.is('iq')) {
+        handleResult(stanza);
+      }
+    });
   };
 
   return {
@@ -29,12 +58,25 @@ angular.module('jabber.services', [])
       });
 
       setupDefaultListeners(client);
+      account = acc;
 
       return client;
     },
-    addListener: function(event, listener) {
+    addConnectionListener: function(event, listener) {
       client.addListener(event, listener);
-    }
+    },
+    getStatus: function() { return status; },
+    getContacts: function(callback) {
+      var getRosterMsg = new XMPP.Element('iq', {
+          id: 'roster_0',
+          type: 'get'
+        }).c('query', {
+          xmlns: 'jabber:iq:roster'
+        });
+      client.send(getRosterMsg);
+      listeners.contactsReady = callback;
+    },
+    getUserName: function() { return account.nickname || account.jid; }
   }
 })
 
