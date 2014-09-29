@@ -119,7 +119,7 @@ angular.module('jabber.services', [])
   };
 })
 
-.factory('storageSrv', function() {
+.factory('StorageSvc', function() {
     var storageKey = '';
 
     return {
@@ -153,10 +153,9 @@ angular.module('jabber.services', [])
     };
 })
 
-.factory('settingsSrv', function(storageSrv) {
-    var settingsKey = "jabber-settings";
-    var storage = storageSrv.load();
-    var settings = storageSrv.get(this.settingsKey);
+.factory('SettingsSvc', function(StorageSvc) {
+    var settingsKey = 'jabber-settings';
+    var settings = StorageSvc.get(settingsKey);
     // TODO: use .json or something similar to store the default values
     var DEFAULTS = {
         'foo': 'moooo'
@@ -168,10 +167,10 @@ angular.module('jabber.services', [])
         },
         set: function(key, value) {
             settings[key] = value;
-            save();
+            this.save();
         },
         save: function() {
-            storage.save(settings, settingsKey);
+            StorageSvc.save(settings, settingsKey);
         },
         get: function(key) {
             return settings[key];
