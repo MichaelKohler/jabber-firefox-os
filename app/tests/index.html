@@ -3,22 +3,23 @@
 <head>
   <meta charset="utf-8"/>
   <title>Automated Test Suite</title>
-  <link rel="stylesheet" href="vendor/mocha.css" type="text/css"/>
-  <script src="vendor/chai.js"></script>
-  <script src="vendor/mocha.js"></script>
+
+  <link rel="shortcut icon" type="image/png" href="vendor/jasmine/jasmine_favicon.png">
+  <link rel="stylesheet" type="text/css" href="vendor/jasmine/jasmine.css">
 
   <!-- App scripts -->
-  <script src="../scripts/chat_history.js" defer></script>
-  <script src="../scripts/chat_message.js" defer></script>
-  <script src="../scripts/notification.js" defer></script>
-  <script src="../scripts/storage.js" defer></script>
-  <script src="../scripts/settings.js" defer></script>
+  <script src="../scripts/lib/angular.min.js"></script>
+  <script src="../scripts/services.js"></script>
+  <script src="../scripts/app.js"></script>
 
-  <!-- Tests -->
+  <!-- Test scripts -->
+  <script src="vendor/jasmine/jasmine.js"></script>
+  <script src="vendor/jasmine/jasmine-html.js"></script>
+  <script src="vendor/jasmine/console.js"></script>
+  <script src="vendor/jasmine/boot.js"></script>
+  <script src="vendor/angular-mocks.js" defer></script>
   <script src="unit_tests.js" defer></script>
 </head>
 <body>
-  <h1>Jabber Firefox OS Test Suite</h1>
-  <div id="mocha"></div>
 </body>
 </html>
