@@ -29,6 +29,12 @@ angular.module('jabber.controllers', [])
     }
   });
 
+  XmppSvc.addEventListener('contactPresenceChanged', function(contact, index) {
+    $scope.$apply(function() {
+      $scope.contacts[index].status = contact.status;
+    });
+  });
+
   $scope.user = XmppSvc.getUserName();
 
   if(XmppSvc.getStatus() == 'online') {
