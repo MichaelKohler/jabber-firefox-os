@@ -1,6 +1,7 @@
 angular.module('jabber.controllers', [])
-.controller('AccountCtrl', function($scope, XmppSvc){
-  $scope.account = {};
+.controller('AccountCtrl', function($scope, XmppSvc, SettingsSvc){
+  console.log(SettingsSvc.get('account'));
+  $scope.account = SettingsSvc.get('account') || {};
 
   XmppSvc.addEventListener('subscriptionRequest', function(from) {
     if(window.confirm('Allow ' + from + ' to see when you are online?')) {
@@ -12,6 +13,13 @@ angular.module('jabber.controllers', [])
 
   $scope.connect = function() {
     client = XmppSvc.connect($scope.account);
+    var acc = $scope.account;
+    SettingsSvc.set('account', {
+      jid: acc.jid,
+      password: acc.password, //TODO(mn): Encrypt password!
+      serverUrl: acc.serverUrl,
+      nickname: acc.nickname
+    });
   }
 })
 .controller('ContactsCtrl', function($scope, XmppSvc){
