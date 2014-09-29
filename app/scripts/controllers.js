@@ -1,6 +1,15 @@
 angular.module('jabber.controllers', [])
 .controller('AccountCtrl', function($scope, XmppSvc){
   $scope.account = {};
+
+  XmppSvc.addEventListener('subscriptionRequest', function(from) {
+    if(window.confirm('Allow ' + from + ' to see when you are online?')) {
+      XmppSvc.allowSubscription(from);
+    } else {
+      XmppSvc.denySubscription(from);
+    }
+  });
+
   $scope.connect = function() {
     client = XmppSvc.connect($scope.account);
   }
@@ -12,10 +21,17 @@ angular.module('jabber.controllers', [])
     {nick: 'Cecil', jid: 'cecil@example.org', status: 'offline'},
   ];
 
+  XmppSvc.addEventListener('subscriptionRequest', function(from) {
+    if(window.confirm('Allow ' + from + ' to see when you are online?')) {
+      XmppSvc.allowSubscription(from);
+    } else {
+      XmppSvc.denySubscription(from);
+    }
+  });
+
   $scope.user = XmppSvc.getUserName();
 
   if(XmppSvc.getStatus() == 'online') {
-    console.log("Getting online contacts");
     XmppSvc.getContacts(function(contacts) {
       $scope.$apply(function() {
         $scope.contacts = contacts;

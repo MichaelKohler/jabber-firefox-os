@@ -19,6 +19,21 @@ angular.module('jabber.services', [])
     }
   }
 
+  var handlePresence = function(stanza) {
+    console.log("PRESENCE STANZA", stanza);
+    if(stanza.attrs.type == 'subscribe') {
+      console.log("Subscription request", stanza.attrs.from, listeners.subscriptionRequest);
+      if(listeners.subscriptionRequest) listeners.subscriptionRequest(stanza.attrs.from);
+    }
+  }
+
+  var completeSubscriptionRequest = function(to, isAllowed) {
+    client.send(new XMPP.Element('presence', {
+      to: to,
+      type: isAllowed ? 'subscribed' : 'unsubscribed'
+    }))
+  }
+
   var setupDefaultListeners = function(client) {
     client.addListener(
         'online',
@@ -44,6 +59,8 @@ angular.module('jabber.services', [])
         //
       } else if(stanza.is('iq')) {
         handleResult(stanza);
+      } else if(stanza.is('presence')) {
+        handlePresence(stanza);
       }
     });
   };
@@ -62,6 +79,9 @@ angular.module('jabber.services', [])
 
       return client;
     },
+    addEventListener: function(event, listener) {
+      listeners[event] = listener;
+    },
     addConnectionListener: function(event, listener) {
       client.addListener(event, listener);
     },
@@ -76,7 +96,9 @@ angular.module('jabber.services', [])
       client.send(getRosterMsg);
       listeners.contactsReady = callback;
     },
-    getUserName: function() { return account.nickname || account.jid; }
+    getUserName: function() { return account.nickname || account.jid; },
+    allowSubscription: function(to) { completeSubscriptionRequest(to, true ); },
+    denySubscription:  function(to) { completeSubscriptionRequest(to, false); }
   }
 })
 
