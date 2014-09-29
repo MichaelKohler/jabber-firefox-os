@@ -6,22 +6,41 @@ angular.module('jabber.services', [])
       roster = [],
       listeners = {};
 
+  var announcePresence = function(status) {
+    var presenceStanza = new XMPP.Element('presence');
+    // if status is undefined, we send the initial broadcast presence
+    // if status is set, we are changing status...
+    if(status) {
+      presenceStanza.c('show').t(status);
+    }
+    client.send(presenceStanza);
+  };
+
   var handleResult = function(stanza) {
     console.log(stanza.attrs.id, stanza.attrs.id == 'roster_0')
     if(stanza.attrs.id == 'roster_0') {
       // We've received the list of contacts
-
       var contacts = stanza.getChild('query').getChildren('item');
       for(var i=0, len = contacts.length; i<len; i++) {
         roster.push({nick: contacts[i].attrs.name, jid: contacts[i].attrs.jid, status: 'offline'});
       }
       if(listeners.contactsReady) listeners.contactsReady(roster);
+      announcePresence();
     }
   }
 
   var handlePresence = function(stanza) {
     if(stanza.attrs.type == 'subscribe') {
       if(listeners.subscriptionRequest) listeners.subscriptionRequest(stanza.attrs.from);
+    } else {
+      var from = stanza.attrs.from.split('/')[0];
+      for(var i=0, len = roster.length; i<len; i++) {
+        if(roster[i].jid == from) {
+          roster[i].status = stanza.getChildText('show') || 'online';
+          if(listeners.contactPresenceChanged) listeners.contactPresenceChanged(roster[i], i);
+          return;
+        }
+      }
     }
   }
 
@@ -37,7 +56,6 @@ angular.module('jabber.services', [])
         'online',
         function() {
             console.log('online');
-            client.send(new XMPP.Element('presence'));
             status = 'online';
         }
     );
@@ -96,8 +114,9 @@ angular.module('jabber.services', [])
     },
     getUserName: function() { return account.nickname || account.jid; },
     allowSubscription: function(to) { completeSubscriptionRequest(to, true ); },
-    denySubscription:  function(to) { completeSubscriptionRequest(to, false); }
-  }
+    denySubscription:  function(to) { completeSubscriptionRequest(to, false); },
+    announcePresence: announcePresence
+  };
 })
 
 .factory('storageSrv', function() {
