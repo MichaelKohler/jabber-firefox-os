@@ -39,7 +39,9 @@
 <automaticallyReconnectIfDisconnected "Bei Unterbrechung automatisch wieder verbinden">
 <logMessageHistory "Nachrichtenverlauf speichern">
 <allowPlaintextLogin "Klartext-Login zulassen">
-<sendKeepAlivePackets "&quot;Keep-alive&quot;-Pakete senden (für NAT-Timeouts)">
+<sendKeepAlivePackets """
+  "Keep-alive"-Pakete senden (für NAT-Timeouts)
+""">
 <autoAuthorizeContacts "Kontakte automatisch autorisieren">
 <notifyWhenAuthorizationWasRecieved "Benachrichtigung senden, wenn Autorisierung erhalten wurde">
 <enterKeySendsChatMessage "Eingabetaste sendet Chat-Nachricht">
@@ -49,7 +51,9 @@
 <clearChatContentsOneHourAfterTheChatPanelWasClosed "Eine Stunde nach dem Schließen des Chat-Panels den Nachrichtenverlauf löschen">
 <playSounds "Töne abspielen">
 <playSoundsWhenAwayNotAvailableOrOffline "Töne abspielen wenn Abwesend, nicht verfügbar oder offline">
-<enableContactIsTypingEvents "&quot;Kontakt schreibt gerade…&quot; Ereignisse aktivieren">
+<enableContactIsTypingEvents """
+  "Kontakt schreibt gerade…" Ereignisse aktivieren
+""">
 
 <message "Nachricht">
 <send "senden">
