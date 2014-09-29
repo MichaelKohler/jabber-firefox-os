@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="{{ locale }}">
 <head>
     <meta charset="utf-8">
     <title>Jabber</title>
@@ -47,19 +47,19 @@
       <section data-type="sidebar" id="sidebar">
           <header>
               <menu type="toolbar">
-                  <button class="toggle-sidebar">Done</button>
+                  <button class="toggle-sidebar" data-l20n="done">Done</button>
               </menu>
           </header>
           <nav>
               <ul>
-                  <li><a href="#/contacts" id="sidebar-show-contacts">Contacts</a></li>
-                  <li><a href="#" id="sidebar-add-contact">Add Contact</a></li>
-                  <li><a href="#" id="sidebar-change-status">Change Status</a></li>
+                  <li><a href="#/contacts" id="sidebar-show-contacts" data-l20n="contacts">Contacts</a></li>
+                  <li><a href="#" id="sidebar-add-contact" data-l20n="addContact">Add Contact</a></li>
+                  <li><a href="#" id="sidebar-change-status" data-l20n="changeStatus">Change Status</a></li>
               </ul>
-              <h2>Settings</h2>
+              <h2 data-l20n="settings">Settings</h2>
               <ul>
-                  <li><a href="#/account" id="sidebar-account-settings">Account</a></li>
-                  <li><a href="#" id="sidebar-options">General</a></li>
+                  <li><a href="#/account" id="sidebar-account-settings" data-l20n="account">Account</a></li>
+                  <li><a href="#" id="sidebar-options" data-l20n="general">General</a></li>
               </ul>
           </nav>
       </section>
@@ -75,6 +75,8 @@
     <script src="scripts/lib/angular.min.js"></script>
     <script src="scripts/lib/angular-ui-router.min.js"></script>
     <script src="scripts/lib/angular-snap.min.js"></script>
+    <script src="scripts/lib/l20n.js"></script>
+    <script src="scripts/lib/ng-l20n.js"></script>
     <script src="scripts/services.js"></script>
     <script src="scripts/controllers.js"></script>
     <script src="scripts/app.js"></script>
