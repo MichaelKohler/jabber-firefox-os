@@ -27,6 +27,8 @@ Please use
 before checking in any files.
 
 ### TODOs
-Currently there is no minifier configured yet. This will come later.
+All TODOs get tracked by issues. Please see the "issues" tab for things to do. If you'd like to help out with this project, feel free to fork this repo and create a Pull Request. We'll look into it as soon as possible.
 
-If you'd like to help out with this, feel free to fork this repo and create a Pull Request. We'll look into it as soon as possible.
+## Metrics
+[![Throughput Graph](https://graphs.waffle.io/michaelkohler/jabber-firefox-os/throughput.svg)](https://waffle.io/michaelkohler/jabber-firefox-os/metrics)
+
