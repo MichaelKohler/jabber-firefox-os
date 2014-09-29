@@ -20,9 +20,7 @@ angular.module('jabber.services', [])
   }
 
   var handlePresence = function(stanza) {
-    console.log("PRESENCE STANZA", stanza);
     if(stanza.attrs.type == 'subscribe') {
-      console.log("Subscription request", stanza.attrs.from, listeners.subscriptionRequest);
       if(listeners.subscriptionRequest) listeners.subscriptionRequest(stanza.attrs.from);
     }
   }
