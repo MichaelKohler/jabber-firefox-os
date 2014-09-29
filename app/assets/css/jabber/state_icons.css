@@ -35,8 +35,8 @@ section[role="region"] > header:first-child .state-icon:before {
 
 .state-online:before { background-position: 0 0; }
 .state-chat:before { background-position: 0 0; }
-.state-away:before { background-position: 0 -60px; }
-.state-xa:before { background-position: 0 -60px; }
-.state-dnd:before { background-position: 0 -30px; }
+.state-away:before { background-position: 0 -30px; }
+.state-xa:before { background-position: 0 -30px; }
+.state-dnd:before { background-position: 0 -60px; }
 .state-invisible:before { background-position: 0 -90px; }
 .state-offline:before { background-position: 0 -90px; }
