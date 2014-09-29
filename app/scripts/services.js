@@ -175,13 +175,13 @@ angular.module('jabber.services', [])
         get: function(key) {
             return settings[key];
         },
-        remove: function() {
+        remove: function(key) {
             delete settings[key];
-            save();
+            this.save();
         },
         reset: function() {
             settings = DEFAULTS;
-            save();
+            this.save();
         }
     };
 });
