@@ -28,6 +28,14 @@ angular.module('jabber.controllers', [])
     {nick: 'Bob', jid: 'bob@example.org', status: 'away'},
     {nick: 'Cecil', jid: 'cecil@example.org', status: 'offline'},
   ];
+    
+  // I am the callback handler for the ngRepeat completion.
+  $scope.$on('ngRepeatComplete', function(rce, elements) {
+    // Prevent context menu long press)
+    elements[0].querySelector('a').addEventListener('contextmenu', function(e){
+      e.preventDefault();
+    }, false);
+  });
 
   XmppSvc.addEventListener('subscriptionRequest', function(from) {
     if(window.confirm('Allow ' + from + ' to see when you are online?')) {
