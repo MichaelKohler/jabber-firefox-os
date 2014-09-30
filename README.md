@@ -32,3 +32,9 @@ All TODOs get tracked by issues. Please see the "issues" tab for things to do. I
 ## Metrics
 [![Throughput Graph](https://graphs.waffle.io/michaelkohler/jabber-firefox-os/throughput.svg)](https://waffle.io/michaelkohler/jabber-firefox-os/metrics)
 
+## Translation / Localization
+Do you want the Jabber app in your native language? Help translating the app on [Transifex](https://www.transifex.com/projects/p/jabber-firefox-os/)
+
+#### Current translation statistics
+
+![Transifex translation statistics](https://www.transifex.com/projects/p/jabber-firefox-os/resource/jabberproperties/chart/image_png)
