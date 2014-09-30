@@ -1,5 +1,5 @@
 <brandName "Jabber">
-<brandDescription "Jabber client for Firefox OS">
+<brandDescription "Jabber client for Firefox OS" content: "Jabber client for Firefox OS">
 
 <back "Back">
 <done "Done">
@@ -27,14 +27,13 @@
 <statusInvisible    "Invisible">
 <statusOffline      "Offline">
 
-<jabberID "Jabber ID">
-<password "Password">
-<nickname {
- *name:     "Nickname",
-  optional: "Nickname ({{ optional }})"
-}>
+<jabberId "Jabber ID" placeholder: "you@example.org">
+<password "Password" placeholder: "Password">
+<serverUrl "Server URL" placeholder: "https://example.org/http-bind">
+<nickname "Nickname" placeholder: "Nickname ({{ optional }})">
 <host "Host">
 <port "Port">
+<testConnection "Test Connection">
 <requestAuthorizationWhenAdding "Request authorization when adding">
 <automaticallyConnectOnStartup "Automatically connect on startup">
 <automaticallyReconnectIfDisconnected "Automatically reconnect if disconnected">
