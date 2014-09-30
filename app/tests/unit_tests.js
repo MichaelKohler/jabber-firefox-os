@@ -122,65 +122,86 @@
     });
 
     describe('Models', function () {
-        /*describe('ChatHistory', function () {
+
+        beforeEach(module('jabber.models'));
+        beforeEach(module('jabber.services'));
+
+        describe('ChatHistory', function () {
+            var ChatHistoryModel = null;
+            var storage = null;
+
+            beforeEach(inject(function(ChatHistory, StorageSvc) {
+                ChatHistoryModel = ChatHistory;
+                storage = StorageSvc;
+            }));
+
             it('Appending message to non-existing conversation should create it', function () {
-                var storage = new StorageHandler();
                 storage.remove('jabber-messages-test@example.org--test');
-                var chatHistory = new ChatHistory('test@example.org--test');
+                var chatHistory = new ChatHistoryModel('test@example.org--test');
                 var message = { text: 'testmessage' };
                 chatHistory.appendMessage(message);
                 var history = chatHistory.getFullHistory();
-                history.should.eql([ message ]);
+                expect(history).toEqual([ message ]);
                 storage.remove('jabber-messages-test@example.org--test');
             });
+
             it('Appending message to existing conversation should append it and getting it should return everything', function () {
-                var storage = new StorageHandler();
                 storage.remove('jabber-messages-test@example.org--test');
-                var chatHistory = new ChatHistory('test@example.org--test');
+                var chatHistory = new ChatHistoryModel('test@example.org--test');
                 var message = { text: 'testmessage' };
                 chatHistory.appendMessage(message);
                 var message2 = { text: 'testmessage2' };
                 chatHistory.appendMessage(message2);
                 var history = chatHistory.getFullHistory();
-                history.should.eql([ message, message2 ]);
+                expect(history).toEqual([ message, message2 ]);
                 storage.remove('jabber-messages-test@example.org--test');
             });
         });
 
         describe('ChatMessage', function () {
+            var ChatHistoryModel = null;
+            var ChatMessageModel = null;
+
+            beforeEach(inject(function(ChatHistory, ChatMessage) {
+                ChatHistoryModel = ChatHistory;
+                ChatMessageModel = ChatMessage;
+            }));
+
             it('Message should be populated correctly', function () {
                 var date = Date.now();
-                var message = new ChatMessage({
+                var message = new ChatMessageModel({
                     sender: 'me',
                     receiver: 'you',
                     text: 'testtext',
                     date: date
                 });
-                message.sender.should.eql('me');
-                message.receiver.should.eql('you');
-                message.text.should.eql('testtext');
-                message.date.should.eql(date);
+                expect(message.sender).toBe('me');
+                expect(message.receiver).toBe('you');
+                expect(message.text).toBe('testtext');
+                expect(message.date).toEqual(date);
             });
+
             it('Message date should be populated correctly if not provided', function () {
-                var message = new ChatMessage({ });
-                chai.expect(message.date).not.to.be.undefined;
+                var message = new ChatMessageModel({ });
+                expect(message.date).toBeDefined();
             });
+
             it('Message should be saved to history after send', function () {
-                var message = new ChatMessage({
+                var message = new ChatMessageModel({
                     sender: 'me2@example.org--test',
                     receiver: 'you2@example.org--test',
                     text: 'testtext',
                     date: Date.now()
                 });
                 message.send();
-                var history = new ChatHistory(message.sender);
+                var history = new ChatHistoryModel(message.sender);
                 var result = history.getFullHistory();
-                result[0].sender.should.eql(message.sender);
-                result[0].receiver.should.eql(message.receiver);
-                result[0].text.should.eql(message.text);
-                result[0].date.should.eql(message.date);
+                expect(result[0].sender).toEqual(message.sender);
+                expect(result[0].receiver).toEqual(message.receiver);
+                expect(result[0].text).toEqual(message.text);
+                expect(result[0].date).toEqual(message.date);
                 history.deleteAll();
             });
-        });*/
+        });
     });
 }());

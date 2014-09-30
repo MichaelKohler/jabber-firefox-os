@@ -2,7 +2,8 @@
   'use strict';
   
   angular
-    .module('jabber', ['snap', 'ui.router', 'ngL20n', 'jabber.controllers', 'jabber.services'])
+    .module('jabber', ['snap', 'ui.router', 'ngL20n', 'jabber.controllers', 'jabber.services',
+            'jabber.models'])
     .config(function($stateProvider, $urlRouterProvider) {
       $stateProvider
       
