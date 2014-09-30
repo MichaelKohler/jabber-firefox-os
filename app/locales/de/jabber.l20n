@@ -27,14 +27,13 @@
 <statusInvisible    "Unsichtbar">
 <statusOffline      "Offline">
 
-<jabberID "Jabber ID">
-<password "Passwort">
-<nickname {
- *name:     "Spitzname",
-  optional: "Spitzname ({{ optional }})"
-}>
+<jabberId "Jabber ID" placeholder: "du@example.org">
+<password "Passwort" placeholder: "Passwort">
+<serverUrl "Server URL" placeholder: "https://example.org/http-bind">
+<nickname "Spitzname" placeholder: "Spitzname ({{ optional }})">
 <host "Host">
 <port "Port">
+<testConnection "Verbindung testen">
 <requestAuthorizationWhenAdding "Autorisierung beim Hinzufügen anfordern">
 <automaticallyConnectOnStartup "Automatisch beim Start verbinden">
 <automaticallyReconnectIfDisconnected "Bei Unterbrechung automatisch wieder verbinden">

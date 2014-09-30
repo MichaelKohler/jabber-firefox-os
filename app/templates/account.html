@@ -1,27 +1,27 @@
 <section id="account-settings-panel" role="region">
     <header class="fixed">
-        <button class="toggle-sidebar" snap-toggle="left"><span class="icon icon-menu">show sidebar</span></button>
+        <button class="toggle-sidebar" snap-toggle="left"><span class="icon icon-menu" data-l20n="showSidebar">Show Sidebar</span></button>
         <menu type="toolbar">
-            <button class="settings-done"><span>Done</span></button>
+            <button class="settings-done" data-l20n="done"><span>Done</span></button>
         </menu>
-        <h1>Account</h1>
+        <h1 data-l20n="account">Account</h1>
     </header>
     <article class="settings header">
         <ul>
             <li>
-                <input type="email" ng-model="account.jid" placeholder="you@example.org" required="">
+                <input type="email" ng-model="account.jid" placeholder="you@example.org" data-l20n="jabberId" required="">
             </li>
             <li>
-                <input type="password" ng-model="account.password" placeholder="Password" required="">
+                <input type="password" ng-model="account.password" placeholder="Password" data-l20n="password" required="">
             </li>
             <li>
-                <input type="url" ng-model="account.serverUrl" placeholder="https://example.org/http-bind" required="">
+                <input type="url" ng-model="account.serverUrl" placeholder="https://example.org/http-bind" data-l20n="serverUrl" required="">
             </li>
             <li>
                 <input type="text" ng-model="account.nickname" placeholder="Nickname (optional)">
             </li>
             <li>
-                <button ng-click="connect()">Test Connection</button>
+                <button ng-click="connect()" data-l20n="testConnection">Test Connection</button>
             </li>
             <!--li>
                 <label class="pack-switch">
