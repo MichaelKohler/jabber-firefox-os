@@ -184,4 +184,26 @@ angular.module('jabber.services', [])
             this.save();
         }
     };
+})
+
+// TODO: figure out how this can be made testable
+.factory('NotificationSvc', function() {
+    return {
+        send: function(message) {
+            if (message === '') {
+                console.warn('It does not make any sense to send an empty notification. Please don\'t do that!');
+                return;
+            }
+            var notification;
+            if (Notification.permission === "granted") {
+                notification = new Notification(message);
+            }
+            else {
+                Notification.requestPermission(function (permission) {
+                    Notification.permission = permission;
+                    notification = new Notification(message);
+                });
+            }
+        }
+    };
 });
