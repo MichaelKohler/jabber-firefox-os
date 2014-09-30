@@ -55,9 +55,9 @@
   Enable "Contact is typing…" events
 """>
 
-<message "Message">
+<message data-placeholder: "Message">
 <send "send">
 <userSettingsHeadline "Settings for {{ $nickname }}">
 <clearChat "Clear chat">
-<showChat history "Show chat history">
+<showChatHistory "Show chat history">
 <muteWithUsername "Mute {{ $nickname }}">
