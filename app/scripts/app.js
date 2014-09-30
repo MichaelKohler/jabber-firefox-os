@@ -38,5 +38,20 @@
         });
 
       $urlRouterProvider.otherwise('/contacts');
-    }).run();
+    })
+  
+    // I invoke the given expression when associated 
+    // ngRepeat loop has finished its rendering.
+    .directive(
+      'repeatComplete',
+      function( $rootScope ) {
+        return {
+          restrict: 'A',
+          link: function (scope, elements, attr) {
+            scope.$emit('ngRepeatComplete', elements, attr);
+          }
+        }
+      }
+    )
+   .run();
 })();
