@@ -2,7 +2,7 @@
     <header class="fixed">
         <button class="toggle-sidebar" snap-toggle="left"><span class="icon icon-menu" data-l20n="showSidebar">Show Sidebar</span></button>
         <menu type="toolbar">
-            <button class="settings-done" data-l20n="done">Done</button>
+            <button class="settings-done" ng-click="saveSettings();" data-l20n="done">Done</button>
         </menu>
         <h1 data-l20n="options">Options</h1>
     </header>
@@ -10,61 +10,61 @@
         <ul>
             <li>
                 <label class="pack-switch">
-                    <input type="checkbox" checked>
+                    <input type="checkbox" ng-click="toggleSetting('auto_auth_contacts');" ng-checked="settings.auto_auth_contacts">
                     <span data-l20n="autoAuthorizeContacts">Auto-authorize contacts</span>
                 </label>
             </li>
             <li>
                 <label class="pack-switch">
-                    <input type="checkbox" checked>
+                    <input type="checkbox" ng-click="toggleSetting('notify_authorization');" ng-checked="settings.notify_authorization">
                     <span data-l20n="notifyWhenAuthorizationWasRecieved">Notify when authorization was recieved</span>
                 </label>
             </li>
             <li>
                 <label class="pack-switch">
-                    <input type="checkbox">
+                    <input type="checkbox" ng-click="toggleSetting('enter_key_sends_message');" ng-checked="settings.enter_key_sends_message">
                     <span data-l20n="enterKeySendsChatMessage">Enter key sends chat message</span>
                 </label>
             </li>
             <li>
                 <label class="pack-switch">
-                    <input type="checkbox" checked>
+                    <input type="checkbox" ng-click="toggleSetting('autoscroll_messages');" ng-checked="settings.autoscroll_messages">
                     <span data-l20n="autoscrollMessagesWindow">Autoscroll messages window</span>
                 </label>
             </li>
             <li>
                 <label class="pack-switch">
-                    <input type="checkbox">
+                    <input type="checkbox" ng-click="toggleSetting('notification_if_jabber_open');" ng-checked="settings.notification_if_jabber_open">
                     <span data-l20n="showNotificationEvenIfJabberAppIsOpened">Show notification even if Jabber app is opened</span>
                 </label>
             </li>
             <li>
                 <label class="pack-switch">
-                    <input type="checkbox">
+                    <input type="checkbox" ng-click="toggleSetting('show_chat_message_received');" ng-checked="settings.show_chat_message_received">
                     <span data-l20n="showChatPanelOnRecievingNewMessage">Show chat panel on recieving new message</span>
                 </label>
             </li>
             <li>
                 <label class="pack-switch">
-                    <input type="checkbox">
+                    <input type="checkbox" ng-click="toggleSetting('clear_chat_contents');" ng-checked="settings.clear_chat_contents">
                     <span data-l20n="clearChatContentsOneHourAfterTheChatPanelWasClosed">Clear chat contents one hour after the chat panel was closed</span>
                 </label>
             </li>
             <li>
                 <label class="pack-switch">
-                    <input type="checkbox" checked>
+                    <input type="checkbox" ng-click="toggleSetting('play_sounds');" ng-checked="settings.play_sounds">
                     <span data-l20n="playSounds">Play sounds</span>
                 </label>
             </li>
             <li>
                 <label class="pack-switch">
-                    <input type="checkbox" checked>
+                    <input type="checkbox" ng-click="toggleSetting('play_sounds_away');" ng-checked="settings.play_sounds_away">
                     <span data-l20n="playSoundsWhenAwayNotAvailableOrOffline">Play sounds when Away, Not Available or Offline</span>
                 </label>
             </li>
             <li>
                 <label class="pack-switch">
-                    <input type="checkbox">
+                    <input type="checkbox" ng-click="toggleSetting('contact_is_typing');" ng-checked="settings.contact_is_typing">
                     <span data-l20n="enableContactIsTypingEvents">Enable "Contact is typing…" events</span>
                 </label>
             </li>

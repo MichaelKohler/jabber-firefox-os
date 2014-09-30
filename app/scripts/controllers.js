@@ -71,11 +71,18 @@ angular.module('jabber.controllers', [])
     $location.path('/chatstate');
   };
 })
-.controller('AddContactsCtrl', function($scope){
+.controller('AddContactsCtrl', function($scope) {
 })
-.controller('ChatStateCtrl', function($scope){
+.controller('ChatStateCtrl', function($scope) {
 })
-.controller('SettingsCtrl', function($scope){
+.controller('SettingsCtrl', function($scope, SettingsSvc){
+  $scope.settings = SettingsSvc.getAll();
+  $scope.toggleSetting = function(id) {
+    $scope.settings[id] = !($scope.settings[id]);
+  },
+  $scope.saveSettings = function() {
+    SettingsSvc.save($scope.settings);
+  }
 })
-.controller('ChatStateCtrl', function($scope){
+.controller('ChatStateCtrl', function($scope) {
 });

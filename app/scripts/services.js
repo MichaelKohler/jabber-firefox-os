@@ -158,8 +158,21 @@ angular.module('jabber.services', [])
     var settings = StorageSvc.get(settingsKey);
     // TODO: use .json or something similar to store the default values
     var DEFAULTS = {
-        'foo': 'moooo'
+        'auto_auth_contacts': false,
+        'notify_authorization': true,
+        'enter_key_sends_message': false,
+        'autoscroll_messages': true,
+        'notification_if_jabber_open': true,
+        'show_chat_message_received': false,
+        'clear_chat_contents': true,
+        'play_sounds': true,
+        'play_sounds_away': false,
+        'contact_is_typing': true
     };
+
+    if (JSON.stringify(settings) == '{}') {
+        settings = DEFAULTS;
+    }
 
     return {
         overloadKey: function(key) {
@@ -169,11 +182,15 @@ angular.module('jabber.services', [])
             settings[key] = value;
             this.save();
         },
-        save: function() {
-            StorageSvc.save(settings, settingsKey);
+        save: function(optObj) {
+            var val = optObj || settings;
+            StorageSvc.save(val, settingsKey);
         },
         get: function(key) {
             return settings[key];
+        },
+        getAll: function() {
+            return settings;
         },
         remove: function(key) {
             delete settings[key];
