@@ -22,7 +22,7 @@ angular.module('jabber.controllers', [])
     });
   }
 })
-.controller('ContactsCtrl', function($scope, XmppSvc){
+.controller('ContactsCtrl', function($scope, $location, XmppSvc){
   $scope.contacts = [
     {nick: 'Alice', jid: 'alice@example.org', status: 'online'},
     {nick: 'Bob', jid: 'bob@example.org', status: 'away'},
@@ -54,6 +54,14 @@ angular.module('jabber.controllers', [])
   }
 
   $scope.status = XmppSvc.getStatus();
+
+  $scope.redirectToAddContact = function() {
+    $location.path('/addcontact');
+  };
+
+  $scope.redirectToChangeStatus = function() {
+    $location.path('/chatstate');
+  };
 })
 .controller('AddContactsCtrl', function($scope){
 })
