@@ -16,6 +16,24 @@
           url: '/account',
           templateUrl: 'templates/account.html',
           controller: 'AccountCtrl'
+        })
+
+        .state('addcontact', {
+          url: '/addcontact',
+          templateUrl: 'templates/add-contact.html',
+          controller: 'AddContactsCtrl'
+        })
+
+        .state('chatstate', {
+          url: '/chatstate',
+          templateUrl: 'templates/chat-state.html',
+          controller: 'ChatStateCtrl'
+        })
+
+        .state('settings', {
+          url: '/settings',
+          templateUrl: 'templates/settings.html',
+          controller: 'SettingsCtrl'
         });
 
       $urlRouterProvider.otherwise('/contacts');

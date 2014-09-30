@@ -54,4 +54,12 @@ angular.module('jabber.controllers', [])
   }
 
   $scope.status = XmppSvc.getStatus();
+})
+.controller('AddContactsCtrl', function($scope){
+})
+.controller('ChatStateCtrl', function($scope){
+})
+.controller('SettingsCtrl', function($scope){
+})
+.controller('ChatStateCtrl', function($scope){
 });
