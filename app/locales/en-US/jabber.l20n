@@ -1,5 +1,5 @@
 <brandName "Jabber">
-<brandDescription "Jabber client for Firefox OS">
+<brandDescription "Jabber client for Firefox OS" content: "Jabber client for Firefox OS">
 
 <back "Back">
 <done "Done">
