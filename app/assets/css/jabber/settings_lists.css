@@ -11,6 +11,9 @@
   -moz-box-sizing: border-box;
   position: relative;
   color: #000;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 0.1rem solid #E7E7E7;
 }
 .settings ul li label:not([for]) {
   background: none;
