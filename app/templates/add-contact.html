@@ -1,23 +1,23 @@
 <section id="add-contact-panel" role="region">
     <header class="fixed">
-        <button class="toggle-sidebar" snap-toggle="left"><span class="icon icon-menu">show sidebar</span></button>
+        <button class="toggle-sidebar" snap-toggle="left"><span class="icon icon-menu" data-l20n="showSidebar">Show Sidebar</span></button>
         <menu type="toolbar">
-            <button class="settings-done"><span>Done</span></button>
+            <button class="settings-done" data-l20n="done">Done</button>
         </menu>
-        <h1>Add Contact</h1>
+        <h1 data-l20n="addContact">Add Contact</h1>
     </header>
     <article class="settings header">
         <ul>
             <li>
-                <input type="email" placeholder="Jabber ID" required="">
+                <input type="email" placeholder="Jabber ID" data-l20n="jabberId" required="">
             </li>
             <li>
-                <input type="text" placeholder="Nickname (optional)">
+                <input type="text" placeholder="Nickname (optional)" data-l20n="nickname">
             </li>
             <li>
                 <label class="pack-switch">
                     <input type="checkbox" checked>
-                    <span>Request authorization when adding</span>
+                    <span data-l20n="requestAuthorizationWhenAdding">Request authorization when adding</span>
                 </label>
             </li>
         </ul>

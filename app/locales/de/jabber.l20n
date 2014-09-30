@@ -55,9 +55,9 @@
   "Kontakt schreibt gerade…" Ereignisse aktivieren
 """>
 
-<message "Nachricht">
+<message data-placeholder: "Nachricht">
 <send "senden">
 <userSettingsHeadline "Einstellungen für {{ $nickname }}">
 <clearChat "Chat löschen">
-<showChat history "Nachrichtenverlauf anzeigen">
+<showChatHistory "Nachrichtenverlauf anzeigen">
 <muteWithUsername "{{ $nickname }} stummschalten">
