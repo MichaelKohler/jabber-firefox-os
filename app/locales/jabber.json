@@ -1,6 +1,7 @@
 {
   "locales": [
     "en-US",
+    "fr",
     "de"
   ],
   "default_locale": "en-US",
