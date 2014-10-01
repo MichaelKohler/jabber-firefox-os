@@ -38,3 +38,10 @@ Do you want the Jabber app in your native language? Help translating the app on 
 #### Current translation statistics
 
 [![Transifex translation statistics](https://www.transifex.com/projects/p/jabber-firefox-os/resource/jabberproperties/chart/image_png)](https://www.transifex.com/projects/p/jabber-firefox-os/resource/jabberproperties/)
+
+#### Automatically fetch latest Translations
+Please use
+
+`gulp fetch_translation`
+
+to fetch all available translation files (`./locales/*`) and automatically update the manifest.webapp file.
