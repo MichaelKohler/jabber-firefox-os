@@ -6,6 +6,7 @@
   "dependencies" : {
     "gulp"                   :  "3.8.8",
     "gulp-jslint"            :  "0.1.7",
-    "gulp-webserver"         :   "0.8.0"
+    "gulp-webserver"         :  "0.8.0",
+    "transifex"              :  "1.x"
   }
 }
