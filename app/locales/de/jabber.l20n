@@ -1,63 +1,56 @@
-<brandName "Jabber">
-<brandDescription "Jabber client für Firefox OS" content: "Jabber client für Firefox OS">
-
+<showChatHistory "Nachrichtenverlauf anzeigen">
 <back "Zurück">
-<done "Fertig">
+<clearChat "Chat löschen">
+<muteWithUsername "{{ $nickname }} stummschalten">
+<notifyWhenAuthorizationWasRecieved "Benachrichtigung senden, wenn Autorisierung erhalten wurde">
+<enableContactIsTypingEvents """
+  "Kontakt schreibt gerade…" Ereignisse aktivieren
+""">
+<port "Port">
 <cancel "Abbrechen">
-<optional "optional">
-
-<showSidebar "Seitenleiste anzeigen">
-<hideSidebar "Seitenleiste ausblenden">
-
-<settings "Einstellungen">
-<connection "Verbindung">
-<account "Benutzerkonto">
-<accountSetup "Benutzerkonto einrichten">
-<options "Optionen">
-<contacts "Kontakte">
-<addContact "Kontakt hinzufügen">
-<changeStatus "Status ändern">
-<general "Allgemein">
-
-<statusOnline       "Online">
-<statusFreeForChat  "Offen für Chats">
-<statusAway         "Abwesend">
-<statusNotAvailable "Nicht verfügbar">
 <statusDoNotDisturb "Nicht stören">
-<statusInvisible    "Unsichtbar">
-<statusOffline      "Offline">
-
+<addContact "Kontakt hinzufügen">
+<optional "optional">
+<showChatPanelOnRecievingNewMessage "Beim Empfangen neuer Nachrichten das Chat-Panel anzeigen">
+<general "Allgemein">
+<changeStatus "Status ändern">
+<done "Fertig">
+<brandDescription "Jabber App für Firefox OS" content: "Jabber App für Firefox OS">
+<statusOffline "Offline">
+<sendKeepAlivePackets """
+  "Keep-alive"-Pakete senden (für NAT-Timeouts)
+""">
+<hideSidebar "Seitenleiste ausblenden">
+<showSidebar "Seitenleiste anzeigen">
+<accountSetup "Benutzerkonto einrichten">
+<playSoundsWhenAwayNotAvailableOrOffline "Töne abspielen wenn abwesend, nicht verfügbar oder offline">
+<send "senden">
+<settings "Einstellungen">
+<autoscrollMessagesWindow "Nachrichtenfenster automatisch scrollen">
+<logMessageHistory "Nachrichtenverlauf speichern">
+<statusAway "Abwesend">
+<showNotificationEvenIfJabberAppIsOpened "Auch wenn die Jabber App geöffnet ist Benachrichtigungen anzeigen">
+<account "Benutzerkonto">
+<automaticallyConnectOnStartup "Automatisch beim Start verbinden">
+<allowPlaintextLogin "Klartext-Login zulassen">
+<statusInvisible "Unsichtbar">
+<clearChatContentsOneHourAfterTheChatPanelWasClosed "Eine Stunde nach dem Schließen des Chat-Panels den Nachrichtenverlauf löschen">
+<message.data-placeholder "Nachricht">
+<testConnection "Verbindung testen">
+<connection "Verbindung">
+<host "Host">
+<enterKeySendsChatMessage "Eingabetaste sendet Chat-Nachricht">
+<userSettingsHeadline "Einstellungen für {{ $nickname }}">
+<playSounds "Töne abspielen">
+<options "Optionen">
+<statusOnline "Online">
+<statusFreeForChat "Verfügbar für Chats">
+<autoAuthorizeContacts "Kontakte automatisch autorisieren">
+<automaticallyReconnectIfDisconnected "Bei Unterbrechung automatisch wieder verbinden">
+<requestAuthorizationWhenAdding "Autorisierung beim Hinzufügen anfordern">
+<contacts "Kontakte">
+<statusNotAvailable "Nicht verfügbar">
 <jabberId "Jabber ID" placeholder: "du@example.org">
 <password "Passwort" placeholder: "Passwort">
 <serverUrl "Server URL" placeholder: "https://example.org/http-bind">
 <nickname "Spitzname" placeholder: "Spitzname ({{ optional }})">
-<host "Host">
-<port "Port">
-<testConnection "Verbindung testen">
-<requestAuthorizationWhenAdding "Autorisierung beim Hinzufügen anfordern">
-<automaticallyConnectOnStartup "Automatisch beim Start verbinden">
-<automaticallyReconnectIfDisconnected "Bei Unterbrechung automatisch wieder verbinden">
-<logMessageHistory "Nachrichtenverlauf speichern">
-<allowPlaintextLogin "Klartext-Login zulassen">
-<sendKeepAlivePackets """
-  "Keep-alive"-Pakete senden (für NAT-Timeouts)
-""">
-<autoAuthorizeContacts "Kontakte automatisch autorisieren">
-<notifyWhenAuthorizationWasRecieved "Benachrichtigung senden, wenn Autorisierung erhalten wurde">
-<enterKeySendsChatMessage "Eingabetaste sendet Chat-Nachricht">
-<autoscrollMessagesWindow "Nachrichtenfenster automatisch scrollen">
-<showNotificationEvenIfJabberAppIsOpened "Auch wenn die Jabber App geöffnet ist Benachrichtigungen anzeigen">
-<showChatPanelOnRecievingNewMessage "Beim Empfangen neuer Nachrichten das Chat-Panel anzeigen">
-<clearChatContentsOneHourAfterTheChatPanelWasClosed "Eine Stunde nach dem Schließen des Chat-Panels den Nachrichtenverlauf löschen">
-<playSounds "Töne abspielen">
-<playSoundsWhenAwayNotAvailableOrOffline "Töne abspielen wenn Abwesend, nicht verfügbar oder offline">
-<enableContactIsTypingEvents """
-  "Kontakt schreibt gerade…" Ereignisse aktivieren
-""">
-
-<message data-placeholder: "Nachricht">
-<send "senden">
-<userSettingsHeadline "Einstellungen für {{ $nickname }}">
-<clearChat "Chat löschen">
-<showChatHistory "Nachrichtenverlauf anzeigen">
-<muteWithUsername "{{ $nickname }} stummschalten">
