@@ -40,6 +40,9 @@ gulp.task('fetch_translation', function () {
     
     var webappManifest = JSON.parse(fs.readFileSync('./app/manifest.webapp', 'utf8'));
     webappManifest.locales = {};
+
+    var localesConfig = JSON.parse(fs.readFileSync('./app/locales/jabber.json', 'utf8'));
+    localesConfig.locales = ['en-US'];
     
     transifex.resourcesInstanceMethods(
         'jabber-firefox-os', 
@@ -161,6 +164,9 @@ gulp.task('fetch_translation', function () {
                         
                         webappManifest.locales[locale] = manifestLocale;
                         fs.writeFileSync('./app/manifest.webapp', JSON.stringify(webappManifest, null, 2), 'utf8');
+
+                        localesConfig.locales.push(locale);
+                        fs.writeFileSync('./app/locales/jabber.json', JSON.stringify(localesConfig, null, 2), 'utf8');
                     }
                 }
             }).bind(this, instanceData.available_languages[i].code));
