@@ -47,4 +47,4 @@ Please use
 
 `gulp fetch_translation`
 
-to fetch all available Translation files (`./app/locales/*`) and automatically update the manifest.webapp file.
+to fetch all available Translation files (`./app/locales/*`) and automatically update the `manifest.webapp` and `./app/locales/jabber.json` file.
