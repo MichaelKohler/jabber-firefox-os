@@ -10,7 +10,10 @@ This is a Jabber client for Firefox OS. You can connect to every jabber server w
 ## Development
 
 ### Get all dependencies
-`npm install`
+```bash
+npm install -g gulp
+npm install
+```
 
 ### Serving webpage
 If you want to run the app from localhost, you can start a local server with
