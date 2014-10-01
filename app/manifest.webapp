@@ -21,17 +21,23 @@
   },
   "type": "privileged",
   "permissions": {
-    "systemXHR": {"description": "To communicate with your Jabber Server(s)"},
-    "desktop-notification": {"description": "Show notifications for new messages and other important events"}
+    "systemXHR": {
+      "description": "To communicate with your Jabber Server(s)"
+    },
+    "desktop-notification": {
+      "description": "Show notifications for new messages and other important events"
+    }
   },
   "installs_allowed_from": [
     "*"
   ],
   "locales": {
+    "fr": {
+      "name": "Jabber"
+    },
     "de": {
-      "name": "Jabber",
-      "description": "Muss noch erstellt werden...",
-      "permissions": {}
+      "description": "Jabber App für Firefox OS",
+      "name": "Jabber"
     }
   },
   "default_locale": "en"

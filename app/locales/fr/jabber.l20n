@@ -1,0 +1,9 @@
+<showChatPanelOnRecievingNewMessage "Afficher le parloir à la réception de nouveaux messages">
+<changeStatus "Changer état">
+<statusOffline "Hors ligne">
+<settings "Réglages">
+<clearChatContentsOneHourAfterTheChatPanelWasClosed "Effacer le contenu de discussions une heure après la fermeture du parloir">
+<options "Options">
+<statusOnline "En ligne">
+<statusFreeForChat "Prêt à parler">
+<nickname "Surnom" placeholder: "Surnom ({{ optional }})">
