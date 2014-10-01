@@ -42,6 +42,7 @@
 <enterKeySendsChatMessage "Eingabetaste sendet Chat-Nachricht">
 <userSettingsHeadline "Einstellungen für {{ $nickname }}">
 <playSounds "Töne abspielen">
+<brandName "Jabber">
 <options "Optionen">
 <statusOnline "Online">
 <statusFreeForChat "Verfügbar für Chats">
