@@ -85,6 +85,7 @@ gulp.task('fetch_translation', function () {
                             
                                 case 'brandName':
                                     manifestLocale.name = item.translation;
+                                    l20n += '<' + item.key + ' "' + item.translation + '">' + "\n";
                                     break;
                             
                                 case 'brandDescription':
