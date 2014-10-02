@@ -5,7 +5,7 @@ This is a Jabber client for Firefox OS. You can connect to every jabber server w
 
 ## Run
 * Install it in the Firefox OS Simulator
-* Run it in your browser (index.html)
+* Run it in your browser (with Server side CORS Support!)
 
 ## Development
 
