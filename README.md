@@ -32,6 +32,7 @@ before checking in any files.
 ### TODOs
 All TODOs get tracked by issues. Please see the "issues" tab for things to do. If you'd like to help out with this project, feel free to fork this repo and create a Pull Request. We'll look into it as soon as possible.
 
+You don't have the necessary knowledge to contribute to our project? There are two possibilites: either we help you get things done within our code or you could leave youd idea creating an issue and we'll consider it for a future version. This means that you don't need to have coding knowledge to contribute, you only need to have a great idea! Since we care about community, we apprieciate every contribution, it doesn't matter what kind.
 ## Metrics
 [![Throughput Graph](https://graphs.waffle.io/michaelkohler/jabber-firefox-os/throughput.svg)](https://waffle.io/michaelkohler/jabber-firefox-os/metrics)
 
