@@ -10,7 +10,7 @@ angular.module('jabber.models', ['jabber.services'])
             },
             appendMessage: function(message) {
                 var history = StorageSvc.get(_historyName);
-                if (history[0]) {
+                if (history instanceof Array && history.length > 0) {
                     history.push(message);
                 }
                 else {
@@ -28,7 +28,7 @@ angular.module('jabber.models', ['jabber.services'])
 .factory('ChatMessage', function (ChatHistory) {
     return function (data) {
         var _date = null;
-        if (data.date > 0) {
+        if (data instanceof Object && data.date > 0) {
             _date = data.date;
         }
         else {
