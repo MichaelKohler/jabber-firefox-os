@@ -43,6 +43,8 @@ Do you want the Jabber app in your native language? Help translating the app on 
 
 [![Transifex translation statistics](https://www.transifex.com/projects/p/jabber-firefox-os/resource/jabberproperties/chart/image_png)](https://www.transifex.com/projects/p/jabber-firefox-os/)
 
+We kindly ask you to only change the English strings within the repository. All other languages should be translated on [Transifex](https://www.transifex.com/projects/p/jabber-firefox-os/). After you've translated them there, you can use gulp (see next chapter here) to automatically download them.
+
 #### Automatically fetch latest Translations
 Please use
 
