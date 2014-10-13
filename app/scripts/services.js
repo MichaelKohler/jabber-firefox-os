@@ -170,7 +170,7 @@ angular.module('jabber.services', [])
         'contact_is_typing': true
     };
 
-    if (JSON.stringify(settings) == '{}') {
+    if (Object.keys(settings).length === 0) {
         settings = DEFAULTS;
     }
 
