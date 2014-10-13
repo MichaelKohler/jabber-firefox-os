@@ -1,8 +1,10 @@
 {
   "locales": [
     "en-US",
+    "eo",
     "fr",
-    "de"
+    "de",
+    "it"
   ],
   "default_locale": "en-US",
   "resources": [

@@ -32,11 +32,19 @@
     "*"
   ],
   "locales": {
+    "eo": {
+      "description": "Kliento de Jabber por Firefox OS",
+      "name": "Jabber"
+    },
     "fr": {
       "name": "Jabber"
     },
     "de": {
       "description": "Jabber App für Firefox OS",
+      "name": "Jabber"
+    },
+    "it": {
+      "description": "Client Jabber per Firefox OS",
       "name": "Jabber"
     }
   },

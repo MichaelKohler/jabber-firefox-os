@@ -1,0 +1,41 @@
+<showChatHistory "Mostra cronologia chat">
+<back "Indietro">
+<clearChat "Elimina chat">
+<muteWithUsername "Muta {{ $nickname }}">
+<port "Porta">
+<cancel "Cancella">
+<statusDoNotDisturb "Non disturbare">
+<addContact "Aggiungi contatto">
+<optional "opzionale">
+<general "Generale">
+<changeStatus "Cambia stato">
+<done "Fatto">
+<brandDescription "Client Jabber per Firefox OS" content: "Client Jabber per Firefox OS">
+<statusOffline "Disconnesso">
+<hideSidebar "Nascondi barra laterale">
+<showSidebar "Mostra barra laterale">
+<accountSetup "Impostazioni account">
+<send "invia">
+<settings "Impostazioni">
+<statusAway "Lontano">
+<account "Account">
+<automaticallyConnectOnStartup "Connetti automaticamente all'avvio">
+<statusInvisible "Invisibile">
+<message.data-placeholder "Messaggio">
+<testConnection "Testa connessione">
+<connection "Connessione">
+<host "Host">
+<userSettingsHeadline "Impostazioni per {{ $nickname }}">
+<playSounds "Avvia suoni">
+<brandName "Jabber">
+<options "Opzioni">
+<statusOnline "Connesso">
+<statusFreeForChat "Libero per chat">
+<automaticallyReconnectIfDisconnected "Connetti automaticamente se disconnesso">
+<requestAuthorizationWhenAdding "Richiedi autorizzazione quando aggiungi">
+<contacts "Contatti">
+<statusNotAvailable "Non disponibile">
+<jabberId "ID Jabber" placeholder: "tu@esempio.it">
+<password "Password" placeholder: "Password">
+<serverUrl "URL Server" placeholder: "https://esempio.it/http-bind">
+<nickname "Nickname" placeholder: "Nickname ({{ optional }})">

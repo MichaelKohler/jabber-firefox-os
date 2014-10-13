@@ -1,0 +1,42 @@
+<showChatHistory "Montri kronologion">
+<back "Reen">
+<clearChat "Vakigi babilejon">
+<muteWithUsername "Silentigi {{ $nickname }}">
+<enableContactIsTypingEvents """
+  Enŝalti eventojn "Kontakto estas tajpanta..."
+""">
+<port "Pordo">
+<cancel "Nuligi">
+<statusDoNotDisturb "Ne ĝenu">
+<addContact "Aldoni kontakton">
+<optional "opcie">
+<general "Ĝenerala">
+<changeStatus "Redakti statuson">
+<done "Farite">
+<brandDescription "Kliento de Jabber por Firefox OS" content: "Kliento de Jabber por Firefox OS">
+<statusOffline "Malkonektite">
+<hideSidebar "Kaŝi flankan panelon">
+<showSidebar "Montri flankan panelon">
+<accountSetup "Agordoj de konto">
+<playSoundsWhenAwayNotAvailableOrOffline "Ludi sonojn kiam for, nedisponebla aŭ nekonektite">
+<send "sendi">
+<settings "Agordoj">
+<statusAway "For">
+<account "Konto">
+<statusInvisible "Nevidebla">
+<message.data-placeholder "Mesaĝo">
+<testConnection "Testi kontekton">
+<connection "Konekto">
+<host "Gastigo">
+<userSettingsHeadline "Agordoj por {{ $nickname }}">
+<playSounds "Ludi sonojn">
+<brandName "Jabber">
+<options "Opcioj">
+<statusOnline "Kontektite">
+<statusFreeForChat "Libere babili">
+<contacts "Kontaktoj">
+<statusNotAvailable "Nedisponebla">
+<jabberId "Identigilo de Jabber" placeholder: "vi@ekzemplo.eo">
+<password "Pasvorto" placeholder: "Pasvorto">
+<serverUrl "URl de servilo" placeholder: "https://ekzemplo.eo/http-bind">
+<nickname "Kaŝnomo" placeholder: "Kaŝnomo ({{ optional }})">
