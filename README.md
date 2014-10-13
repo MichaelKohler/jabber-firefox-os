@@ -1,6 +1,6 @@
 [![Stories in Ready](https://badge.waffle.io/michaelkohler/jabber-firefox-os.png?label=ready&title=Ready)](https://waffle.io/michaelkohler/jabber-firefox-os)  [![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/MichaelKohler/jabber-firefox-os?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
-# Jabber
+# Jabber ![Jabber](https://raw.githubusercontent.com/MichaelKohler/jabber-firefox-os/master/app/assets/icons/icon48.png) 
 This is a Jabber client for Firefox OS. You can connect to every jabber server with it (this means you can also use Facebook Chat within this client).
 
 ## Run
