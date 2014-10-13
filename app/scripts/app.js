@@ -50,7 +50,7 @@
           link: function (scope, elements, attr) {
             scope.$emit('ngRepeatComplete', elements, attr);
           }
-        }
+        };
       }
     )
    .run();
