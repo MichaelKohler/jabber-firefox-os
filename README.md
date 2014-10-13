@@ -51,3 +51,7 @@ Please use
 `gulp fetch_translation`
 
 to fetch all available Translation files (`./app/locales/*`) and automatically update the `./app/manifest.webapp` and `./app/locales/jabber.json` file.
+
+## Screenshots
+
+![Throughput Graph](https://raw.githubusercontent.com/MichaelKohler/jabber-firefox-os/master/screenshots/design_proposal_main_screen.png) ![Throughput Graph](https://raw.githubusercontent.com/MichaelKohler/jabber-firefox-os/master/screenshots/design_proposal_chat_screen.png) ![Throughput Graph](https://raw.githubusercontent.com/MichaelKohler/jabber-firefox-os/master/screenshots/design_proposal_menu.png) ![Throughput Graph](https://raw.githubusercontent.com/MichaelKohler/jabber-firefox-os/master/screenshots/design_proposal_change_status.png) ![Throughput Graph](https://raw.githubusercontent.com/MichaelKohler/jabber-firefox-os/master/screenshots/design_proposal_account_settings_screen.png) ![Throughput Graph](https://raw.githubusercontent.com/MichaelKohler/jabber-firefox-os/master/screenshots/design_proposal_options_screen.png)
