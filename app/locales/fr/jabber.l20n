@@ -1,10 +1,53 @@
+<showChatHistory "Historique des conversations">
+<back "Retour">
+<clearChat "Effacer la discussion">
+<muteWithUsername "{{ $nickname }} silencieux">
+<notifyWhenAuthorizationWasRecieved "Avertir quand une autorisation est reçue">
+<enableContactIsTypingEvents "Valider l'avertissement « Contact est en train d'écrire… »">
+<port "Port">
+<cancel "Annuler">
+<statusDoNotDisturb "Ne pas déranger">
+<addContact "Ajouter un contact">
+<optional "Optionnel">
 <showChatPanelOnRecievingNewMessage "Afficher le parloir à la réception de nouveaux messages">
+<general "Général">
 <changeStatus "Changer état">
+<done "Terminé">
+<brandDescription "Client Jabber pour Firefox OS" content: "Client Jabber pour Firefox OS">
 <statusOffline "Hors ligne">
+<sendKeepAlivePackets "Envoyer des paquets « keep-alive » (pour les hors délais des NAT)">
+<hideSidebar "Cacher volet latéral">
+<showSidebar "Montrer volet latéral">
+<accountSetup "Paramétrer un compte">
+<playSoundsWhenAwayNotAvailableOrOffline "Sons même si absent, Pas disponible ou Hors ligne">
+<send "envoyer">
 <settings "Réglages">
+<autoscrollMessagesWindow "Défilement automatique de la fenêtre des messages">
+<logMessageHistory "Historique des messages">
+<statusAway "Absent">
+<showNotificationEvenIfJabberAppIsOpened "Afficher les notifications même quand la fenêtre principale est ouverte">
+<account "Compte">
+<automaticallyConnectOnStartup "Connexion automatique au démarrage">
+<allowPlaintextLogin "Permettre l'identification en clair">
+<statusInvisible "Déconnecté">
 <clearChatContentsOneHourAfterTheChatPanelWasClosed "Effacer le contenu de discussions une heure après la fermeture du parloir">
+<message.data-placeholder "Message">
+<testConnection "Test de connexion">
+<connection "Connexion">
+<host "Hôte">
+<enterKeySendsChatMessage "La touche Entrée envoie le message">
+<userSettingsHeadline "Paramètres de {{ $nickname }}">
+<playSounds "Jouer les sons">
 <brandName "Jabber">
 <options "Options">
 <statusOnline "En ligne">
 <statusFreeForChat "Prêt à parler">
+<autoAuthorizeContacts "Autorisation automatique des contacts">
+<automaticallyReconnectIfDisconnected "Reconnexion automatique">
+<requestAuthorizationWhenAdding "Demande d'autorisation d'ajout ">
+<contacts "Contacts">
+<statusNotAvailable "Indisponible">
+<jabberId "Identifiant Jabber" placeholder: "vous@exemple.org">
+<password "Mot de passe" placeholder: "Mot de passe">
+<serverUrl "URL du serveur" placeholder: "https://example.org/http-bind">
 <nickname "Surnom" placeholder: "Surnom ({{ optional }})">

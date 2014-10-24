@@ -1,0 +1,45 @@
+<showChatHistory "Mostrar histórico de bate-papo">
+<back "Voltar">
+<clearChat "Limpar bate-papo">
+<muteWithUsername "Silenciar {{ $nickname }}">
+<notifyWhenAuthorizationWasRecieved "Notificar quando a autorização for recebida">
+<enableContactIsTypingEvents """
+  Ativar eventos "contato está digitando ..."
+""">
+<port "Porta">
+<cancel "Cancelar">
+<statusDoNotDisturb "Não perturbe">
+<addContact "Adicionar Contatos">
+<optional "Opcional">
+<general "Geral">
+<changeStatus "Alterar Status">
+<done "Concluído">
+<brandDescription "Cliente Jabber para o Firefox OS" content: "Cliente Jabber para o Firefox OS">
+<statusOffline "Desconectado">
+<hideSidebar "Esconder Barra lateral">
+<showSidebar "Mostrar Barra lateral">
+<accountSetup "Configurar Conta">
+<playSoundsWhenAwayNotAvailableOrOffline "Tocar quando ausente, não disponível ou Desconectado">
+<send "enviar">
+<settings "Configurações">
+<logMessageHistory "histórico de mensagens">
+<account "Conta">
+<automaticallyConnectOnStartup "Conectar automaticamente na inicialização">
+<statusInvisible "Invisível">
+<message.data-placeholder "Mensagem">
+<testConnection "Testar Conexão">
+<connection "Conexão">
+<host "Hospedeiro">
+<userSettingsHeadline "Configurações de {{ $nickname }}">
+<playSounds "Tocar sons">
+<brandName "Jabber">
+<options "Opções">
+<statusOnline "Conectado">
+<statusFreeForChat "Chat Grátis">
+<requestAuthorizationWhenAdding "Pedido de autorização ao adicionar">
+<contacts "Contatos">
+<statusNotAvailable "Não disponível">
+<jabberId "ID Jabber" placeholder: "you@example.org">
+<password "Senha" placeholder: "Senha">
+<serverUrl "Endereço do servidor" placeholder: "https://example.org/http-bind">
+<nickname "Apelido" placeholder: "Apelido ({{ optional }})">

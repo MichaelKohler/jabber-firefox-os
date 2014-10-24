@@ -4,7 +4,8 @@
     "eo",
     "fr",
     "de",
-    "it"
+    "it",
+    "pt_BR"
   ],
   "default_locale": "en-US",
   "resources": [

@@ -37,6 +37,7 @@
       "name": "Jabber"
     },
     "fr": {
+      "description": "Client Jabber pour Firefox OS",
       "name": "Jabber"
     },
     "de": {
@@ -45,6 +46,10 @@
     },
     "it": {
       "description": "Client Jabber per Firefox OS",
+      "name": "Jabber"
+    },
+    "pt_BR": {
+      "description": "Cliente Jabber para o Firefox OS",
       "name": "Jabber"
     }
   },
