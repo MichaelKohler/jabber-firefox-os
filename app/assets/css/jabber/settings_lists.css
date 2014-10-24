@@ -1,12 +1,12 @@
-
 .settings ul {
   margin: 0;
   padding: 1rem 1rem 3rem 1rem;
   overflow: hidden;
   list-style: none;
-  min-height: 100%;
+  min-height: calc(100% - 4rem); /* height - padding */
   background-color: #f4f4f4;
 }
+
 .settings ul li {
   -moz-box-sizing: border-box;
   position: relative;
@@ -15,9 +15,19 @@
   padding-bottom: 0.75rem;
   border-bottom: 0.1rem solid #E7E7E7;
 }
+
+.settings ul li:last-child {
+  border-bottom: none;
+}
+
+.settings.no-separator ul li {
+  border-bottom: none;
+}
+
 .settings ul li label:not([for]) {
   background: none;
 }
+
 .settings ul li > a,
 .settings ul li > span,
 .settings ul li > small,
@@ -31,6 +41,7 @@
   padding: 0 3rem;
   margin: 0 -1.5rem;
 }
+
 .settings ul li,
 .settings ul li > a,
 .settings ul li > label {
@@ -38,12 +49,15 @@
   flex-direction: column;
   justify-content: center;
 }
+
 .settings ul li[hidden] {
   display: none;
 }
+
 .settings ul li > a > span {
   pointer-events: none;
 }
+
 .settings ul li.active a,
 .settings ul li.active span,
 .settings ul li:not([aria-disabled="true"]) > small + a:active,

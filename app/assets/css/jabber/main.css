@@ -10,7 +10,7 @@
 .header {
   position: relative;
   top: 5rem;
-  height: calc(100% - 5rem);
+  height: calc(100% - 5rem);  /* height - top */
 }
 
 section[role="region"] > header:first-child a,
