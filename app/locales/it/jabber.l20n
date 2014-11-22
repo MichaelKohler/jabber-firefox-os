@@ -2,35 +2,51 @@
 <back "Indietro">
 <clearChat "Elimina chat">
 <muteWithUsername "Muta {{ $nickname }}">
+<notifyWhenAuthorizationWasRecieved "Avvisa quando l'autorizzazione è stata ricevuta">
+<enableContactIsTypingEvents """
+  Abilita gli eventi "L'utente sta scrivendo..."
+""">
 <port "Porta">
 <cancel "Cancella">
 <statusDoNotDisturb "Non disturbare">
 <addContact "Aggiungi contatto">
 <optional "opzionale">
+<showChatPanelOnRecievingNewMessage "Mostra il pannello della chat quando si riceve un nuovo messaggio">
 <general "Generale">
 <changeStatus "Cambia stato">
 <done "Fatto">
 <brandDescription "Client Jabber per Firefox OS" content: "Client Jabber per Firefox OS">
 <statusOffline "Disconnesso">
+<sendKeepAlivePackets """
+  Invia pacchetti "Mantenere in vita" (per i timeout NAT)
+""">
 <hideSidebar "Nascondi barra laterale">
 <showSidebar "Mostra barra laterale">
 <accountSetup "Impostazioni account">
+<playSoundsWhenAwayNotAvailableOrOffline "Emetti un suono quando l'utente è lontano, non disponibile o disconnesso">
 <send "invia">
 <settings "Impostazioni">
+<autoscrollMessagesWindow "Finestra dei messaggi a scorrimento automatico">
+<logMessageHistory "Registra cronologia dei messaggi">
 <statusAway "Lontano">
+<showNotificationEvenIfJabberAppIsOpened "Mostra le notifiche anche se l'applicazione Jabber è aperta">
 <account "Account">
 <automaticallyConnectOnStartup "Connetti automaticamente all'avvio">
+<allowPlaintextLogin "Permetti login in chiaro">
 <statusInvisible "Invisibile">
+<clearChatContentsOneHourAfterTheChatPanelWasClosed "Elimina il contenuto della chat dopo un'ora dalla chiusura del pannello di conversazione">
 <message.data-placeholder "Messaggio">
 <testConnection "Testa connessione">
 <connection "Connessione">
 <host "Host">
+<enterKeySendsChatMessage "Il tasto invio manda il messaggio">
 <userSettingsHeadline "Impostazioni per {{ $nickname }}">
 <playSounds "Avvia suoni">
 <brandName "Jabber">
 <options "Opzioni">
 <statusOnline "Connesso">
 <statusFreeForChat "Libero per chat">
+<autoAuthorizeContacts "Autorizza automaticamente i contatti">
 <automaticallyReconnectIfDisconnected "Connetti automaticamente se disconnesso">
 <requestAuthorizationWhenAdding "Richiedi autorizzazione quando aggiungi">
 <contacts "Contatti">
