@@ -3,10 +3,16 @@
   "version": "0.0.1",
   "author": "",
   "description": "Jabber client for Firefox OS",
-  "dependencies" : {
-    "gulp"                   :  "3.8.8",
-    "gulp-jslint"            :  "0.1.7",
-    "gulp-webserver"         :  "0.8.0",
-    "transifex"              :  "1.x"
-  }
+  "dependencies": {
+    "gulp": "3.8.11",
+    "gulp-jslint": "1.0.3",
+    "gulp-webserver": "0.8.1",
+    "transifex": "1.x",
+    "snyk": "^1.42.5"
+  },
+  "scripts": {
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
+  },
+  "snyk": true
 }
